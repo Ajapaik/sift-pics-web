@@ -1,14 +1,7 @@
-Sift.pics is a spin-off of Ajapaik
+Sift.pics is a spin-off of Ajapaik.ee for crowdsourcing basic categorisations to historic photographs. Users have to make binary categorisations (out of currently 7 pairs) whether a picture is interior or exterior, has one person or many people on it etc.
 
-The code hosted here is a Django application that serves our mobile app via Django REST Framework
-and implements some views to get acquainted with the project and it's results. Most of the mobile apps'
-functionality has also been implemented for the web.
+The code hosted here is a Django application implementing the tagging and also sorting functionality for the albums added to Sift.pics. The app also serves Sift.pics android app via Django REST Framework. The mobile app only has the tagging functionality (no sorting interface).
 
 Our (official) instance: http://sift.pics/
-
-The main attraction is our Android app that people use to send us data (tags) about historic photographs
-so anyone could sort them based on said tags later:
+Sift.pics at Google Play Store:
 https://play.google.com/store/apps/details?id=pics.sift.app
-
-Repo at:
-https://bitbucket.org/ajapaik/sift.pics
