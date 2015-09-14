@@ -1,0 +1,6 @@
+.DS_Store
+*.pyc
+*.pyo
+.idea
+project/sift/settings/local.py
+static-collected

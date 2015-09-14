@@ -1,0 +1,21 @@
+server {
+        listen 80;
+        server_name sift.pics;
+
+        access_log /var/log/nginx/sift.access.log;
+        error_log /var/log/nginx/sift.error.log;
+
+        location /media  {
+                alias /var/garage/rephoto/media;
+        }
+
+        location /static {
+                expires 7d;
+                alias /var/garage/rephoto/static-collected;
+        }
+
+        location / {
+                include uwsgi_params;
+                uwsgi_pass unix:/var/garage/run/sift_pics.sock;
+        }
+}
