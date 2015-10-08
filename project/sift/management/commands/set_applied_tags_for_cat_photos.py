@@ -1,10 +1,9 @@
 from django.core.management.base import BaseCommand
-
 from project.sift.models import CatTagPhoto, CatRealTag, CatAppliedTag
 
 
 class Command(BaseCommand):
-    help = 'Will apply tags to photos based on criteria'
+    help = "Will apply tags to photos based on criteria"
 
     def handle(self, *args, **options):
         tags = CatTagPhoto.objects.prefetch_related('tag')
@@ -21,6 +20,7 @@ class Command(BaseCommand):
                 tag_tally[t.photo_id][t.tag.name][1] += 1
             elif t.value == -1:
                 tag_tally[t.photo_id][t.tag.name][2] += 1
+
         CatAppliedTag.objects.all().delete()
         for pk, pv in tag_tally.items():
             for tk, tv in pv.items():

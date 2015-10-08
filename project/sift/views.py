@@ -4,11 +4,11 @@ import time
 import datetime
 import random
 from ujson import dumps
-import operator
 
 from django.utils.translation import activate
 from django.views.decorators.cache import never_cache
 from django.views.decorators.vary import vary_on_headers
+import operator
 from pytz import utc
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
@@ -33,25 +33,13 @@ from rest_framework import authentication
 from rest_framework import exceptions
 from django.utils.translation import ugettext as _
 
-from project.sift.forms import CatLoginForm, CatAuthForm, CatAlbumStateForm, CatTagForm, CatFavoriteForm, \
-    CatResultsFilteringForm, \
+from project.sift.forms import CatLoginForm, CatAuthForm, CatAlbumStateForm, CatTagForm, CatFavoriteForm, CatResultsFilteringForm, \
     CatPushRegisterForm, HaystackCatPhotoSearchForm
 from project.sift.models import CatAlbum, CatTagPhoto, CatPhoto, CatTag, CatUserFavorite, CatPushDevice, CatProfile
+from project.ajapaik.models import Photo
 from project.sift.serializers import CatResultsPhotoSerializer
 from project.sift.forms import CatTaggerAlbumSelectionForm
 from project.sift.settings import SITE_ID, CAT_RESULTS_PAGE_SIZE
-
-
-def custom_404(request):
-    response = render_to_response('404.html', {}, context_instance=RequestContext(request))
-    response.status_code = 404
-    return response
-
-
-def custom_500(request):
-    response = render_to_response('500.html', {}, context_instance=RequestContext(request))
-    response.status_code = 500
-    return response
 
 
 class CustomAuthentication(authentication.BaseAuthentication):
@@ -172,7 +160,7 @@ def cat_albums(request):
     profile = request.user.profile
     all_tags = CatTagPhoto.objects.all()
     all_distinct_profile_tags = all_tags.distinct('profile')
-    general_user_leaderboard = CatProfile.objects.filter(pk__in=[x.profile_id for x in all_distinct_profile_tags]) \
+    general_user_leaderboard = CatProfile.objects.filter(pk__in=[x.profile_id for x in all_distinct_profile_tags])\
         .annotate(tag_count=Count('tags')).order_by('-tag_count')
     general_user_rank = 0
     for i in range(0, len(general_user_leaderboard)):
@@ -211,8 +199,7 @@ def cat_albums(request):
             'id': a.id,
             'title': a.title,
             'subtitle': a.subtitle,
-            'image': request.build_absolute_uri(
-                reverse('project.sift.views.cat_album_thumb', args=(a.id,))) + '?' + str(time.time()),
+            'image': request.build_absolute_uri(reverse('project.sift.views.cat_album_thumb', args=(a.id,))) + '?' + str(time.time()),
             'tagged': user_tagged_photos_count,
             'total': a.photos.count(),
             'decisions': user_tags_count,
@@ -241,12 +228,12 @@ def _get_album_state(request, form):
         content['title'] = album.title
         content['subtitle'] = album.subtitle
         content['image'] = request.build_absolute_uri(reverse('project.sift.views.cat_album_thumb', args=(album.id,)))
-        user_tags = CatTagPhoto.objects.filter(profile=request.get_user().profile, album=album) \
+        user_tags = CatTagPhoto.objects.filter(profile=request.get_user().profile, album=album)\
             .values('photo').annotate(tag_count=Count('profile'))
         tag_count_dict = {}
         for each in user_tags:
             tag_count_dict[each['photo']] = each['tag_count']
-        user_favorites = CatUserFavorite.objects.filter(profile=request.get_user().profile, album=album) \
+        user_favorites = CatUserFavorite.objects.filter(profile=request.get_user().profile, album=album)\
             .values_list('photo_id', flat=True)
         for p in album.photos.all():
             available_cat_tags = all_cat_tags - set(CatTagPhoto.objects.filter(
@@ -296,7 +283,7 @@ def _get_user_data(request, remove_favorite=None, add_favorite=None):
     profile = request.get_user().profile
     user_cat_tags = CatTagPhoto.objects.filter(profile=profile)
     all_distinct_profile_tags = CatTagPhoto.objects.distinct('profile')
-    general_user_leaderboard = CatProfile.objects.filter(pk__in=[x.profile_id for x in all_distinct_profile_tags]) \
+    general_user_leaderboard = CatProfile.objects.filter(pk__in=[x.profile_id for x in all_distinct_profile_tags])\
         .annotate(tag_count=Count('tags')).order_by('-tag_count')
     general_user_rank = 0
     for i in range(0, len(general_user_leaderboard)):
@@ -341,7 +328,7 @@ def cat_album_state(request):
 def cat_photo(request, photo_id=None, thumb_size=600):
     if not photo_id:
         photo_id = CatPhoto.objects.order_by('?').first().pk
-    cache_key = 'sift_photo_response_%s_%s_%s' % (SITE_ID, photo_id, thumb_size)
+    cache_key = "ajapaik_cat_photo_response_%s_%s_%s" % (SITE_ID, photo_id, thumb_size)
     cached_response = cache.get(cache_key)
     if cached_response:
         return cached_response
@@ -357,8 +344,8 @@ def cat_photo(request, photo_id=None, thumb_size=600):
     next_week = datetime.datetime.now() + datetime.timedelta(seconds=604800)
     response = HttpResponse(content, content_type='image/jpg')
     response['Content-Length'] = len(content)
-    response['Cache-Control'] = 'max-age=604800, public'
-    response['Expires'] = next_week.strftime('%a, %d %b %y %T GMT')
+    response['Cache-Control'] = "max-age=604800, public"
+    response['Expires'] = next_week.strftime("%a, %d %b %y %T GMT")
     cache.set(cache_key, response)
 
     return response
@@ -454,7 +441,6 @@ def user_favorite_remove(request):
 
     return Response(content)
 
-
 icon_map = {
     'interior': 'local_hotel',
     'exterior': 'nature_people',
@@ -464,6 +450,8 @@ icon_map = {
     'raised': 'filter_drama',
     'rural': 'nature',
     'urban': 'location_city',
+    'nature': 'nature',
+    'manmade': 'location_city',
     'one': 'person',
     'many': 'group_add',
     'public': 'public',
@@ -491,7 +479,8 @@ _('Whole')
 _('Detail')
 _('Staged')
 _('Natural')
-
+_('Manmade')
+_('Nature')
 
 @vary_on_headers('X-Requested-With')
 def cat_results(request):
@@ -538,6 +527,7 @@ def cat_results(request):
                         if '1' in cd[k]:
                             selected_tag_value_dict[k]['left'] = True
                             photos = photos.filter(catappliedtag__tag__name=tag_dict[k]['left'].lower())
+                            print tag_dict[k]['left'].lower()
                         if '0' in cd[k]:
                             selected_tag_value_dict[k]['na'] = True
                             photos = photos.filter(catappliedtag__tag__name=(k + '_NA'))
@@ -553,8 +543,7 @@ def cat_results(request):
             photos = photos.distinct()
             total_results = photos.count()
             json_state['totalResults'] = total_results
-            photos = photos.annotate(favorited=Count('catuserfavorite')).order_by('-favorited')[
-                     page * CAT_RESULTS_PAGE_SIZE: (page + 1) * CAT_RESULTS_PAGE_SIZE]  # .prefetch_related('source')
+            photos = photos.annotate(favorited=Count('catuserfavorite')).order_by('-favorited')[page * CAT_RESULTS_PAGE_SIZE: (page + 1) * CAT_RESULTS_PAGE_SIZE]#.prefetch_related('source')
             current_result_set_start = page * CAT_RESULTS_PAGE_SIZE
             current_result_set_end = (page + 1) * CAT_RESULTS_PAGE_SIZE
             if current_result_set_start == 0:
@@ -576,8 +565,7 @@ def cat_results(request):
         if not photo_serializer:
             photos = CatPhoto.objects.all()
             json_state['totalResults'] = photos.count()
-            photos = photos.annotate(favorited=Count('catuserfavorite')).order_by('-favorited')[
-                     page * CAT_RESULTS_PAGE_SIZE: (page + 1) * CAT_RESULTS_PAGE_SIZE]
+            photos = photos.annotate(favorited=Count('catuserfavorite')).order_by('-favorited')[page * CAT_RESULTS_PAGE_SIZE: (page + 1) * CAT_RESULTS_PAGE_SIZE]
             json_state['currentResultSetStart'] = page * CAT_RESULTS_PAGE_SIZE
             json_state['currentResultSetEnd'] = (page + 1) * CAT_RESULTS_PAGE_SIZE
             # potential_existing_ajapaik_photos = Photo.objects.filter(source_key__in=(photos.values_list('source_key', flat=True)))
@@ -589,7 +577,7 @@ def cat_results(request):
             #             break
             photo_serializer = CatResultsPhotoSerializer(photos, many=True)
             json_state['photos'] = photo_serializer.data
-        return HttpResponse(JSONRenderer().render(json_state), content_type='application/json')
+        return HttpResponse(JSONRenderer().render(json_state), content_type="application/json")
     else:
         albums = CatAlbum.objects.all()
         json_state['page'] = page + 1
@@ -612,6 +600,7 @@ def cat_results(request):
         }))
 
 
+
 def cat_about(request):
     # Ensure user has profile
     request.get_user()
@@ -632,10 +621,8 @@ def cat_tagger(request):
         state['albumName'] = album_selection_form.cleaned_data['album'].title
         title = state['albumName'] + ' - ' + _('Tag historic photos')
     request.get_user()
-    all_tags = CatTag.objects.all()
-    state['allTags'] = {
-    x.name: {'leftIcon': icon_map[x.name.split('_')[0]], 'rightIcon': icon_map[x.name.split('_')[-1]]} for x in
-    all_tags}
+    all_tags = CatTag.objects.filter(active=True)
+    state['allTags'] = { x.name: {'leftIcon': icon_map[x.name.split('_')[0]], 'rightIcon': icon_map[x.name.split('_')[-1]]} for x in all_tags }
     albums = CatAlbum.objects.all()
     return render_to_response('cat_tagger.html', RequestContext(request, {
         'title': title,
@@ -652,7 +639,7 @@ def cat_tagger(request):
 def cat_register_push(request):
     cat_push_register_form = CatPushRegisterForm(request.data)
     profile = request.get_user().profile
-    cat_push_register_form.data['profile'] = profile
+    cat_push_register_form.data["profile"] = profile
     content = {
         'error': 4
     }
@@ -684,7 +671,7 @@ def cat_deregister_push(request):
     content = {
         'error': 0
     }
-    cat_push_register_form.data['profile'] = profile
+    cat_push_register_form.data["profile"] = profile
     if cat_push_register_form.is_valid():
         try:
             CatPushDevice.objects.get(
@@ -705,7 +692,7 @@ def logout(request):
 
     logout(request)
 
-    if 'HTTP_REFERER' in request.META:
-        return redirect(request.META['HTTP_REFERER'])
+    if "HTTP_REFERER" in request.META:
+        return redirect(request.META["HTTP_REFERER"])
 
-    return redirect('/')
+    return redirect("/")
