@@ -1,5 +1,4 @@
 from haystack import indexes
-
 from project.sift.models import CatPhoto
 
 

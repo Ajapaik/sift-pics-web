@@ -1,23 +1,15 @@
+from autoslug import AutoSlugField
 from django.contrib.auth.models import User
 from django.db.models import Model, CharField, SmallIntegerField, BooleanField, ForeignKey, IntegerField, \
-    DateTimeField, TextField, ImageField, URLField, ManyToManyField, OneToOneField
+    DateTimeField, TextField, ImageField, URLField, ManyToManyField, OneToOneField, NullBooleanField
 from django.db.models.signals import post_save
 
 from project.utils import calculate_thumbnail_size
+from project.common.models import BaseSource
 
 
-class Source(Model):
-    name = CharField(max_length=255)
-    description = TextField(null=True, blank=True)
-    created = DateTimeField(auto_now_add=True)
-    modified = DateTimeField(auto_now=True)
-
-    def __unicode__(self):
-        return self.name
-
-    class Meta:
-        abstract = True
-        db_table = 'project_source'
+class Source(BaseSource):
+    pass
 
 
 class CatProfile(Model):
@@ -25,6 +17,10 @@ class CatProfile(Model):
 
     class Meta:
         db_table = 'project_catprofile'
+
+    @property
+    def id(self):
+        return self.user_id
 
 
 def _user_post_save(sender, instance, **kwargs):
@@ -58,7 +54,7 @@ class CatRealTag(Model):
 
 class CatAppliedTag(Model):
     tag = ForeignKey('CatRealTag')
-    photo = ForeignKey('CatPhoto')
+    photo = ForeignKey('CatPhoto', related_name='applied_tags')
 
     class Meta:
         db_table = 'project_catappliedtag'
@@ -98,6 +94,7 @@ class CatUserFavorite(Model):
 
 class CatPhoto(Model):
     title = CharField(max_length=255)
+    slug = AutoSlugField(populate_from='title', always_update=True)
     description = TextField(null=True, blank=True)
     height = IntegerField(null=True, blank=True)
     width = IntegerField(null=True, blank=True)
@@ -106,7 +103,13 @@ class CatPhoto(Model):
     source = ForeignKey('Source', null=True, blank=True)
     source_url = URLField(null=True, blank=True, max_length=255)
     source_key = CharField(max_length=255, blank=True, null=True)
+    muis_id = CharField(max_length=100, null=True, blank=True)
+    muis_media_id = CharField(max_length=100, null=True, blank=True)
     tags = ManyToManyField(CatTag, related_name='photos', through=CatTagPhoto)
+    flip = NullBooleanField()
+    invert = NullBooleanField()
+    stereo = NullBooleanField()
+    rotated = IntegerField(null=True, blank=True)
     created = DateTimeField(auto_now_add=True)
     modified = DateTimeField(auto_now=True)
 
@@ -118,7 +121,7 @@ class CatPhoto(Model):
 
     def get_source_with_key(self):
         if self.source_key:
-            return str(self.source.description + ' ' + self.source_key)
+            return self.source.description + ' ' + str(self.source_key)
         return self.source.name
 
     # FIXME: Ineffective
@@ -132,7 +135,6 @@ class CatPhoto(Model):
 class CatAlbum(Model):
     title = CharField(max_length=255)
     subtitle = CharField(max_length=255)
-    image = ImageField(upload_to='cat', max_length=255)
     photos = ManyToManyField(CatPhoto, related_name='album')
     created = DateTimeField(auto_now_add=True)
     modified = DateTimeField(auto_now=True)

@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "cat_base.html" %}
 
 {% load compress i18n static %}
 
@@ -13,7 +13,7 @@
                 <div id="cat-tagger-image-and-button-container">
                     <div id="cat-tagger-image-and-desc-container">
                         <a id="cat-tagger-current-photo-link" href="" target="_blank" title="">
-                            <img id="cat-tagger-current-photo" alt="" class="img-responsive" src="">
+                            <img id="cat-tagger-current-photo" alt="" title="" class="img-responsive">
                         </a>
                         <div class="hidden" id="cat-tagger-photo-description-container">
                             <p id="cat-tagger-photo-description" title=""></p>
@@ -48,13 +48,29 @@
                     <div class="btn-group btn-group-justified cat-btn-group" role="group" aria-label="...">
                         <div class="btn-group" role="group">
                             <button type="button" id="cat-tagger-favorite-button" class="btn btn-default">
-                                <i id="cat-tagger-favorite" class="material-icons">favorite_outline</i>
+                                <i id="cat-tagger-favorite" class="material-icons">favorite_border</i>
                             </button>
                         </div>
                         <div class="btn-group" role="group">
                             <button type="button" id="cat-tagger-info-button" class="btn btn-default">
                                 <i id="cat-tagger-info" class="material-icons">info</i>
                             </button>
+                        </div>
+                    </div>
+                    <div class="row cat-margin-top-50">
+                        <div class="span6 cat-row-content-center">
+                            <div class="fb-like" data-cat-id="" data-href="" data-layout="standard"
+                                 data-action="like" data-show-faces="true" data-colorscheme="dark" data-share="true">
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false" id="cat-tagger-share-button">
+                                    <i class="material-icons">share</i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a id="cat-tagger-share-link"></a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -65,7 +81,7 @@
         <div class="col-xs-12 cat-no-right-padding cat-no-left-padding" id="cat-album-selection"></div>
     </div>
     <div class="hidden">
-        {% include "_cat_album_selection_album_js_template.html" %}
+        {% include "js_templates/cat_album_selection_album.html" %}
     </div>
 {% endblock %}
 
@@ -78,9 +94,9 @@
                 albumThumbURL = '{% url 'project.sift.views.cat_album_thumb' %}',
                 tagURL = '{% url 'project.sift.views.cat_tag' %}',
                 filterURL = '{% url 'project.sift.views.cat_results' %}',
-                favoriteAddURL = '{% url 'project.sift.views.user_favorite_add' %}',
-                favoriteRemoveURL = '{% url 'project.sift.views.user_favorite_remove' %}',
-                originalWindowTitle = '{% trans "Tag historic photos" %} - {% trans "Sift.pics" %}';
+                permalinkBlankURL = '{% url "project.sift.views.photo_permalink" %}',
+                originalWindowTitle = '{% trans "Tag historic photos" %} - {% trans "Sift.pics" %}',
+                baseURL = '{{ request.get_host }}';
             $(document).ready(function () {
                 var catTagger = new CatTagger();
                 catTagger.initialize();

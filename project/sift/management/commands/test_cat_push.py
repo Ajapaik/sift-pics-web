@@ -1,9 +1,7 @@
 # coding=utf-8
 import ujson as json
-
 from django.core.management.base import BaseCommand
 import requests
-
 from project.sift.models import CatPushDevice
 from project.sift.settings import GOOGLE_API_KEY, GCM_ENDPOINT
 
@@ -14,16 +12,16 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         headers = {
-            'UserAgent': 'GCM-Server',
+            'UserAgent': "GCM-Server",
             'Content-Type': 'application/json',
             'Authorization': 'key=' + GOOGLE_API_KEY
         }
 
         push_recipients = CatPushDevice.objects.all()
         values = {
-            'registration_ids': [x.token for x in push_recipients],
-            'data': {'album': 7, 'title': 'Elmar Einasto'},
-            'collapse_key': 'message'
+            "registration_ids": [x.token for x in push_recipients],
+            "data": {"album": 7, "title": "Elmar Einasto"},
+            "collapse_key": "message"
         }
         values = json.dumps(values)
 

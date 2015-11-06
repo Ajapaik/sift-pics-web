@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-08 12:27+0300\n"
+"POT-Creation-Date: 2015-10-26 16:21+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,20 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: project/sift/static/js/cat-curator.js:68
+msgid "Not selected"
+msgstr ""
+
+#: project/sift/static/js/cat-curator.js:382
+msgid ""
+"Are you sure you want to create an album with less than 5 photos? We "
+"recommend to create albums with at least 10 or more pictures."
+msgstr ""
+
+#: project/sift/static/js/cat-curator.js:406
+msgid "System error"
+msgstr ""
 
 #: project/sift/static/js/cat-extra-js-translations.js:5
 msgid "Interior"
@@ -34,8 +48,8 @@ msgid "Rural"
 msgstr ""
 
 #: project/sift/static/js/cat-extra-js-translations.js:9
-msgid "Man-made"
-msgstr ""
+msgid "Manmade"
+msgstr "Man-made"
 
 #: project/sift/static/js/cat-extra-js-translations.js:10
 msgid "Nature"
@@ -100,14 +114,14 @@ msgid ""
 msgstr ""
 
 #: project/sift/static/js/cat-extra-js-translations.js:25
-#: project/sift/static/js/cat-results.js:105
-#: project/sift/static/js/cat-tagger.js:129
+#: project/sift/static/js/cat-results.js:112
+#: project/sift/static/js/cat-tagger.js:136
 msgid "You are contributor number %(rank)s."
 msgstr ""
 
 #: project/sift/static/js/cat-extra-js-translations.js:26
-#: project/sift/static/js/cat-results.js:104
-#: project/sift/static/js/cat-tagger.js:128
+#: project/sift/static/js/cat-results.js:111
+#: project/sift/static/js/cat-tagger.js:135
 msgid ""
 "%(users)s users have made %(decisions)s decisions about %(pictures)s "
 "pictures."

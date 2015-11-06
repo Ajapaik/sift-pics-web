@@ -1,5 +1,4 @@
 from modeltranslation.translator import translator, TranslationOptions
-
 from project.sift.models import CatAlbum
 
 

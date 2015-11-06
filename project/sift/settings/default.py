@@ -8,7 +8,7 @@ MESSAGE_STORAGE = 'django.contrib.messages.storage.fallback.FallbackStorage'
 
 gettext = lambda s: s
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 DEFER_JAVASCRIPT = False
@@ -24,9 +24,10 @@ MEDIA_ROOT = '%s/media' % ABSOLUTE_PROJECT_ROOT
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
-ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
+ADMIN_MEDIA_PREFIX = STATIC_URL + "admin/"
 
 STATICFILES_DIRS = (
+    '%s/project/static' % ABSOLUTE_PROJECT_ROOT,
     '%s/project/sift/static' % ABSOLUTE_PROJECT_ROOT,
 )
 
@@ -91,14 +92,15 @@ TEMPLATE_LOADERS = (
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.BrokenLinkEmailsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'project.sift.middleware.ForceDefaultLanguageMiddleware',
+    'project.ajapaik.middleware.ForceDefaultLanguageMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'project.sift.middleware.SessionBasedLocaleWithRedirectMiddleware',
+    'mobi.middleware.MobileDetectionMiddleware',
+    'project.ajapaik.middleware.SessionBasedLocaleWithRedirectMiddleware',
     'project.sift.user_middleware.UserMiddleware',
 )
 
@@ -119,6 +121,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.static',
     'django.core.context_processors.request',
     'django.contrib.messages.context_processors.messages',
+    'project.ajapaik.context_processors.analytics',
 )
 
 ADMIN_TOOL_APPS = (
@@ -150,6 +153,7 @@ EXTERNAL_APPS = (
 )
 
 LOCAL_APPS = (
+    'project.common',
     'project.sift',
 )
 
@@ -161,7 +165,7 @@ AUTHENTICATION_BACKENDS = (
 
 AUTH_PROFILE_MODULE = 'project.sift.CatProfile'
 
-LOGIN_URL = '/admin/'
+LOGIN_URL = "/admin/"
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'],
@@ -179,15 +183,20 @@ CACHES = {
     }
 }
 
-DEFAULT_FROM_EMAIL = 'info@yourdomain.com'
+DEFAULT_FROM_EMAIL = 'info@ajapaik.ee'
 SERVER_EMAIL = DEFAULT_FROM_EMAIL
 
-GCM_ENDPOINT = 'http://android.googleapis.com/gcm/send'
+GCM_ENDPOINT = "http://android.googleapis.com/gcm/send"
 CAT_RESULTS_PAGE_SIZE = 25
 
 HAYSTACK_CONNECTIONS = {
     'default': {
-        'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
-        'PATH': os.path.join(os.path.dirname(__file__), '../whoosh_index'),
+        'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
+        'URL': 'http://127.0.0.1:8983/solr/collection2'
     },
 }
+
+# Why does Sift want this?
+FACEBOOK_APP_KEY = ''
+
+AJAPAIK_VALIMIMOODUL_URL = 'http://ajapaik.ee:8080/ajapaik-service/AjapaikService.json'

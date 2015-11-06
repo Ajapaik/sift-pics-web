@@ -1,10 +1,9 @@
 # http://docs.djangoproject.com/en/dev/topics/http/middleware/
 # http://docs.djangoproject.com/en/dev/topics/auth/
-from functools import partial
-
 from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
+from functools import partial
 
 
 def get_user(request):

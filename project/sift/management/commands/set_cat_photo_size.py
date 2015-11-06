@@ -1,10 +1,9 @@
 from django.core.management.base import BaseCommand
-
 from project.sift.models import CatPhoto
 
 
 class Command(BaseCommand):
-    help = 'Will autopopulate width/height fields for Sift.pics photos'
+    help = "Will autopopulate width/height fields for Sift.pics photos"
 
     def handle(self, *args, **options):
         photos = CatPhoto.objects.filter(height__isnull=True)

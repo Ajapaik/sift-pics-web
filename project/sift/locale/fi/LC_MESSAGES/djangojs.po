@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ajapaik\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-08 12:27+0300\n"
-"PO-Revision-Date: 2015-09-11 09:27+0000\n"
+"POT-Creation-Date: 2015-10-26 16:21+0200\n"
+"PO-Revision-Date: 2015-10-13 13:23+0000\n"
 "Last-Translator: Lauri Elias\n"
 "Language-Team: Finnish (http://www.transifex.com/estonian-photographic-"
 "heritage-society/ajapaik/language/fi/)\n"
@@ -17,6 +17,20 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: project/sift/static/js/cat-curator.js:68
+msgid "Not selected"
+msgstr ""
+
+#: project/sift/static/js/cat-curator.js:382
+msgid ""
+"Are you sure you want to create an album with less than 5 photos? We "
+"recommend to create albums with at least 10 or more pictures."
+msgstr ""
+
+#: project/sift/static/js/cat-curator.js:406
+msgid "System error"
+msgstr ""
 
 #: project/sift/static/js/cat-extra-js-translations.js:5
 msgid "Interior"
@@ -35,7 +49,7 @@ msgid "Rural"
 msgstr ""
 
 #: project/sift/static/js/cat-extra-js-translations.js:9
-msgid "Man-made"
+msgid "Manmade"
 msgstr ""
 
 #: project/sift/static/js/cat-extra-js-translations.js:10
@@ -101,14 +115,14 @@ msgid ""
 msgstr ""
 
 #: project/sift/static/js/cat-extra-js-translations.js:25
-#: project/sift/static/js/cat-results.js:105
-#: project/sift/static/js/cat-tagger.js:129
+#: project/sift/static/js/cat-results.js:112
+#: project/sift/static/js/cat-tagger.js:136
 msgid "You are contributor number %(rank)s."
 msgstr ""
 
 #: project/sift/static/js/cat-extra-js-translations.js:26
-#: project/sift/static/js/cat-results.js:104
-#: project/sift/static/js/cat-tagger.js:128
+#: project/sift/static/js/cat-results.js:111
+#: project/sift/static/js/cat-tagger.js:135
 msgid ""
 "%(users)s users have made %(decisions)s decisions about %(pictures)s "
 "pictures."

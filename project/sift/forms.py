@@ -29,6 +29,7 @@ class CatAlbumStateForm(forms.Form):
     id = forms.ModelChoiceField(queryset=CatAlbum.objects.all())
     max = forms.IntegerField(required=False)
     state = forms.CharField(max_length=255, required=False)
+    is_web = forms.BooleanField(required=False, initial=False)
 
 
 class CatTagForm(forms.Form):
@@ -67,6 +68,10 @@ class CatTaggerAlbumSelectionForm(forms.Form):
     album = forms.ModelChoiceField(queryset=CatAlbum.objects.all())
 
 
+class CatPhotoSelectionForm(forms.Form):
+    photo = forms.ModelChoiceField(queryset=CatPhoto.objects.all())
+
+
 class HaystackCatPhotoSearchForm(SearchForm):
     def search(self):
         sqs = super(HaystackCatPhotoSearchForm, self).search().models(CatPhoto)
@@ -75,3 +80,29 @@ class HaystackCatPhotoSearchForm(SearchForm):
             return self.no_query_found()
 
         return sqs
+
+
+class CatCuratorAlbumEditForm(forms.Form):
+    album = forms.ModelChoiceField(queryset=CatAlbum.objects.all())
+    title = forms.CharField(max_length=255, required=True)
+    subtitle = forms.CharField(max_length=255, required=False)
+
+
+class CatCuratorAlbumAddForm(forms.ModelForm):
+    class Meta:
+        model = CatAlbum
+        fields = ('title', 'subtitle')
+
+
+class CatCuratorPhotoUploadForm(forms.Form):
+    id = forms.CharField(max_length=100)
+    title = forms.CharField(max_length=255, required=False)
+    creators = forms.CharField(max_length=255, required=False)
+    imageUrl = forms.CharField()
+    institution = forms.CharField(max_length=255, required=False)
+    urlToRecord = forms.CharField(max_length=1023, required=False)
+    identifyingNumber = forms.CharField(max_length=255)
+    flip = forms.BooleanField(required=False)
+    invert = forms.BooleanField(required=False)
+    stereo = forms.BooleanField(required=False)
+    rotated = forms.FloatField(min_value=0, max_value=270, required=False)

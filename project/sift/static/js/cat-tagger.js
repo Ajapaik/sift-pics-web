@@ -6,6 +6,8 @@
     /*global getAlbumsURL */
     /*global favoriteAddURL */
     /*global favoriteRemoveURL */
+    /*global permalinkBlankURL */
+    /*global baseURL */
     /*global URI */
     /*global tagURL */
     /*global filterURL */
@@ -15,6 +17,7 @@
     /*global _gaq */
     /*global tmpl */
     /*global originalWindowTitle */
+    /*global FB*/
     window.CatTagger = function () {
         this.selectedAlbumId = null;
         this.selectedAlbumTitle = null;
@@ -52,8 +55,12 @@
             this.currentPhotoTagIndex = -1;
             this.currentPhoto = this.photos[this.currentPhotoIndex];
             $('#cat-tagger-current-photo').attr('src', this.currentPhoto.image.replace('[DIM]', '800'))
-                .attr('alt', this.currentPhoto.title);
-            $('#cat-tagger-current-photo-link').attr('href', this.currentPhoto.source.url)
+                .attr('alt', this.currentPhoto.title).attr('title', this.currentPhoto.title);
+            var shareURL = permalinkBlankURL + this.currentPhoto.id + '/';
+            $('.fb-like').attr('data-href', 'http://' + baseURL + shareURL).attr('data-cat-id', this.currentPhoto.id);
+            FB.XFBML.parse();
+            $('#cat-tagger-share-link').html('<a traget="_blank" href="http://' + baseURL + shareURL + '">http://' + baseURL + shareURL + '</a>');
+            $('#cat-tagger-current-photo-link').attr('href', shareURL + this.currentPhoto.slug)
                 .attr('data-id', this.currentPhoto.id).attr('title', this.currentPhoto.title);
             $('#cat-tagger-favorite-button').attr('data-id', this.currentPhoto.id);
             $('#cat-tagger-info-button').attr('data-id', this.currentPhoto.id);
@@ -69,12 +76,12 @@
             if (this.currentPhoto.is_user_favorite) {
                 favoriteButton.find('i').html('favorite');
             } else {
-                favoriteButton.find('i').html('favorite_outline');
+                favoriteButton.find('i').html('favorite_border');
             }
         },
         nextTag: function () {
             this.currentPhotoTagIndex += 1;
-            if (this.currentPhotoTagIndex > 1) {
+            if (this.currentPhotoTagIndex > 1 || this.currentPhotoTagIndex > (this.currentPhoto.tag.length - 1)) {
                 this.nextPhoto();
             } else {
                 var currentTag = this.currentPhoto.tag[this.currentPhotoTagIndex],
@@ -162,6 +169,7 @@
                 url: this.loadAlbumURL,
                 data: {
                     id: this.selectedAlbumId,
+                    is_web: true,
                     csrfmiddlewaretoken: docCookies.getItem('csrftoken')
                 },
                 method: 'POST',
@@ -205,7 +213,7 @@
                 var $this = $(this),
                     url,
                     remove = false;
-                if ($this.hasClass('active')) {
+                if ($this.find('i').html() === 'favorite') {
                     url = that.removeFavoriteURL;
                     remove = true;
                 } else {

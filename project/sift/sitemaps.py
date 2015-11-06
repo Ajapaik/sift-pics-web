@@ -1,7 +1,6 @@
 from django.contrib.sitemaps import Sitemap
+from project.sift.models import CatAlbum, CatPhoto
 from django.core.urlresolvers import reverse
-
-from project.sift.models import CatAlbum
 
 
 class AlbumTagSitemap(Sitemap):
@@ -38,3 +37,16 @@ class StaticViewSitemap(Sitemap):
 
     def location(self, item):
         return reverse(item)
+
+
+class PhotoSitemap(Sitemap):
+    priority = 1
+
+    def items(self):
+        return CatPhoto.objects.all()
+
+    def lastmod(self, obj):
+        return obj.modified
+
+    def location(self, obj):
+        return reverse('project.sift.views.photo_permalink', args=(obj.pk, obj.slug))
