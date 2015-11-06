@@ -57,8 +57,8 @@ urlpatterns += patterns('',
     url(r'^sitemap\.xml$', sitemap, {'sitemaps': {'album_filter_urls': AlbumResultSitemap, 'album_tag_urls': AlbumTagSitemap, 'static_pages': StaticViewSitemap, 'photo_urls': PhotoSitemap}}, name='django.contrib.sitemaps.views.sitemap'),
 )
 
-handler500 = 'project.ajapaik.views.custom_500'
-handler404 = 'project.ajapaik.views.custom_404'
+handler500 = 'project.sift.views.custom_500'
+handler404 = 'project.sift.views.custom_404'
 
 urlpatterns += patterns('', (r'^robots\.txt$', TemplateView.as_view(template_name='robots-sift.txt', content_type='text/plain')), )
 

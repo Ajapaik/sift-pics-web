@@ -48,4 +48,3 @@ transifex-client==0.11b3
 ujson==1.33
 uWSGI==2.0.10
 uwsgitop==0.8
-Whoosh==2.7.0

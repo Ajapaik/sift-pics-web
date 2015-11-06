@@ -92,7 +92,7 @@ TEMPLATE_LOADERS = (
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.BrokenLinkEmailsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'project.ajapaik.middleware.ForceDefaultLanguageMiddleware',
+    'project.common.middleware.ForceDefaultLanguageMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -100,7 +100,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'mobi.middleware.MobileDetectionMiddleware',
-    'project.ajapaik.middleware.SessionBasedLocaleWithRedirectMiddleware',
+    'project.common.middleware.SessionBasedLocaleWithRedirectMiddleware',
     'project.sift.user_middleware.UserMiddleware',
 )
 
@@ -121,7 +121,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.static',
     'django.core.context_processors.request',
     'django.contrib.messages.context_processors.messages',
-    'project.ajapaik.context_processors.analytics',
+    'project.sift.context_processors.analytics',
 )
 
 ADMIN_TOOL_APPS = (
