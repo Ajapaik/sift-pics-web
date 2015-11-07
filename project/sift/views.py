@@ -41,8 +41,9 @@ from django.utils.translation import ugettext as _
 
 from project.sift.forms import CatLoginForm, CatAuthForm, CatAlbumStateForm, CatTagForm, CatFavoriteForm, CatResultsFilteringForm, \
     CatPushRegisterForm, HaystackCatPhotoSearchForm, CatCuratorAlbumEditForm, CatCuratorAlbumAddForm, \
-    CatCuratorPhotoUploadForm
-from project.sift.models import CatAlbum, CatTagPhoto, CatPhoto, CatTag, CatUserFavorite, CatPushDevice, CatProfile, Source
+    CatCuratorPhotoUploadForm, CatPhotoPairingForm, CatPhotoPairSelectionForm
+from project.sift.models import CatAlbum, CatTagPhoto, CatPhoto, CatTag, CatUserFavorite, CatPushDevice, CatProfile, Source, \
+    CatPhotoPair
 from project.sift.serializers import CatResultsPhotoSerializer, CatCuratorAlbumSelectionAlbumSerializer
 from project.sift.forms import CatTaggerAlbumSelectionForm
 from project.sift.settings import SITE_ID, CAT_RESULTS_PAGE_SIZE, AJAPAIK_VALIMIMOODUL_URL, MEDIA_ROOT
@@ -1052,3 +1053,56 @@ def photo_permalink(request, photo_id=None, photo_slug=None):
         raise Http404('No such photo')
 
     return render_to_response('cat_photo_permalink.html', RequestContext(request, context))
+
+
+def cat_connect(request, first=0, second=0):
+    request.get_user()
+    context = {}
+    first = int(first)
+    second = int(second)
+    if first == 0:
+        p1 = CatPhoto.objects.order_by('?').first()
+    else:
+        p1 = CatPhoto.objects.filter(pk=first).first()
+    if second == 0:
+        p2 = CatPhoto.objects.order_by('?').first()
+    else:
+        p2 = CatPhoto.objects.filter(pk=second).first()
+    if request.method == 'POST':
+        form = CatPhotoPairingForm(request.POST.copy())
+        form.data['profile'] = request.get_user().catprofile
+        if form.is_valid():
+            new_pair = form.save()
+            context['new_pair'] = new_pair
+    context['p1'] = p1
+    context['p2'] = p2
+
+    return render_to_response('cat_connect.html', RequestContext(request, context))
+
+
+def cat_connection_permalink(request):
+    context = {}
+    form = CatPhotoPairSelectionForm(request.GET)
+    if form.is_valid():
+        context['pair'] = form.cleaned_data['pair']
+
+    return render_to_response('cat_connection.html', RequestContext(request, context))
+
+
+def cat_side_by_side_image(request, pair_id):
+    pair = get_object_or_404(CatPhotoPair, id=pair_id)
+    im1 = Image.open(pair.photo1.image)
+    im2 = Image.open(pair.photo2.image)
+    combined = Image.new('RGB', (800, 800))
+    im1.thumbnail((400, 400))
+    im2.thumbnail((400, 400))
+    combined.paste(im1, (0, 0))
+    combined.paste(im2, (400, 0))
+    content = combined.read()
+    next_week = datetime.datetime.now() + datetime.timedelta(seconds=604800)
+    response = HttpResponse(content, content_type='image/jpg')
+    response['Content-Length'] = len(content)
+    response['Cache-Control'] = "max-age=604800, public"
+    response['Expires'] = next_week.strftime("%a, %d %b %y %T GMT")
+
+    return response

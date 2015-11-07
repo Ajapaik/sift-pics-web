@@ -154,3 +154,15 @@ class CatPushDevice(Model):
 
     class Meta:
         db_table = 'project_catpushdevice'
+
+
+class CatPhotoPair(Model):
+    profile = ForeignKey('CatProfile')
+    photo1 = ForeignKey('CatPhoto', related_name='pair_first')
+    photo2 = ForeignKey('CatPhoto', related_name='pair_second')
+    comment = TextField(blank=True, null=True)
+    created = DateTimeField(auto_now_add=True)
+    modified = DateTimeField(auto_now=True)
+
+    class Meta:
+        db_table = 'project_catphotopair'

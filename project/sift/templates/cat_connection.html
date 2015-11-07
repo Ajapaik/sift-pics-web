@@ -1,0 +1,32 @@
+{% extends "cat_base.html" %}
+
+{% load i18n compress static thumbnail %}
+
+{% block header %}
+    {% include "_cat_header.html" %}
+{% endblock %}
+
+{% block layout %}
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6">
+                <img src="{% url 'project.sift.view.cat_photo' pair.photo1.pk 600 pair.photo1.slug %}" class="img-responsive">
+            </div>
+            <div class="col-xs-6">
+                <img src="{% url 'project.sift.view.cat_photo' pair.photo2.pk 600 pair.photo2.slug %}" class="img-responsive">
+            </div>
+        </div>
+        <div class="row">
+            {{ pair.comment }}
+        </div>
+    </div>
+{% endblock %}
+
+{% block specific_js %}
+    {% compress js %}
+        <script>
+            var taggerURL = '{% url 'project.sift.views.cat_tagger' %}',
+                filterURL = '{% url 'project.sift.views.cat_results' %}';
+        </script>
+    {% endcompress %}
+{% endblock %}
