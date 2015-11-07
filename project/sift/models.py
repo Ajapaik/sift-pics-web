@@ -169,8 +169,8 @@ class CatPhotoPair(Model):
     class Meta:
         db_table = 'project_catphotopair'
 
-    def get_sbs_url(self):
-        return reverse('project.sift.views.cat_side_by_side_image', args=(self.pk,))
+    def get_sbs_url(self, is_fb_share=0):
+        return reverse('project.sift.views.cat_side_by_side_image', args=(self.pk, is_fb_share))
 
     def get_absolute_url(self):
         return reverse('project.sift.views.cat_connection_permalink', args=(self.pk,))

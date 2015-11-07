@@ -1106,20 +1106,24 @@ def cat_connection_permalink(request, pair_id):
     pair.url = request.build_absolute_uri(pair.get_absolute_url())
     fb_extra = {
         'photo': {
-            'url': request.build_absolute_uri(pair.get_sbs_url())
+            'url': request.build_absolute_uri(pair.get_sbs_url(1))
         }
     }
 
     return render_to_response('cat_connection.html', RequestContext(request, {'pair': pair, 'fb_extra': fb_extra}))
 
 
-def cat_side_by_side_image(request, pair_id):
+def cat_side_by_side_image(request, pair_id, is_fb_share=0):
+    is_fb_share = int(is_fb_share)
     pair = get_object_or_404(CatPhotoPair, id=pair_id)
     im1 = Image.open(pair.photo1.image)
     im2 = Image.open(pair.photo2.image)
     im1.thumbnail((600, 628))
     im2.thumbnail((600, 628))
-    combined = Image.new('RGB', (1200, 628))
+    if is_fb_share == 1:
+        combined = Image.new('RGB', (1200, 628), (255, 255, 255, 0))
+    else:
+        combined = Image.new('RGB', (1200, 628))
     max_thumb_height = max(im1.size[1], im2.size[1])
     y_coord = (628 - max_thumb_height) / 2
     combined.paste(im1, (0, y_coord))
