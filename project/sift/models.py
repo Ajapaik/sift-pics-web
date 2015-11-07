@@ -111,6 +111,7 @@ class CatPhoto(Model):
     invert = NullBooleanField()
     stereo = NullBooleanField()
     rotated = IntegerField(null=True, blank=True)
+    date_text = CharField(max_length=255, null=True, blank=True)
     created = DateTimeField(auto_now_add=True)
     modified = DateTimeField(auto_now=True)
 
