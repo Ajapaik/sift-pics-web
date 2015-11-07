@@ -25,7 +25,7 @@
             </div>
             <div class="col-xs-12">
             {% if new_pair %}
-                <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"></div>
+                <div class="fb-share-button" data-href="{{ new_pair.url }}" data-layout="button"></div>
             {% else %}
                 <form method='post' action='{% url 'project.sift.views.cat_connect' p1.pk p2.pk %}' class='form-horizontal cat-margin-top-50'>
                     {% csrf_token %}

@@ -7,13 +7,10 @@
 {% endblock %}
 
 {% block layout %}
-    <div class="container">
+    <div class="container cat-margin-top-50">
         <div class="row">
-            <div class="col-xs-6">
-                <img src="{% url 'project.sift.view.cat_photo' pair.photo1.pk 600 pair.photo1.slug %}" class="img-responsive">
-            </div>
-            <div class="col-xs-6">
-                <img src="{% url 'project.sift.view.cat_photo' pair.photo2.pk 600 pair.photo2.slug %}" class="img-responsive">
+            <div class="col-xs-12">
+                <img src="{% url 'project.sift.views.cat_side_by_side_image' pair.pk %}" class="img-responsive">
             </div>
         </div>
         <div class="row">

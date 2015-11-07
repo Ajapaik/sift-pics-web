@@ -1,5 +1,6 @@
 from autoslug import AutoSlugField
 from django.contrib.auth.models import User
+from django.core.urlresolvers import reverse
 from django.db.models import Model, CharField, SmallIntegerField, BooleanField, ForeignKey, IntegerField, \
     DateTimeField, TextField, ImageField, URLField, ManyToManyField, OneToOneField, NullBooleanField
 from django.db.models.signals import post_save
@@ -166,3 +167,9 @@ class CatPhotoPair(Model):
 
     class Meta:
         db_table = 'project_catphotopair'
+
+    def get_sbs_url(self):
+        return reverse('project.sift.views.cat_side_by_side_image', args=(self.pk,))
+
+    def get_absolute_url(self):
+        return reverse('project.sift.views.cat_connection_permalink', args=(self.pk,))

@@ -1073,6 +1073,7 @@ def cat_connect(request, first=0, second=0):
         form.data['profile'] = request.get_user().catprofile
         if form.is_valid():
             new_pair = form.save()
+            new_pair.url = request.build_absolute_uri(new_pair.get_absolute_url())
             context['new_pair'] = new_pair
     context['p1'] = p1
     context['p2'] = p2
@@ -1080,28 +1081,24 @@ def cat_connect(request, first=0, second=0):
     return render_to_response('cat_connect.html', RequestContext(request, context))
 
 
-def cat_connection_permalink(request):
-    context = {}
-    form = CatPhotoPairSelectionForm(request.GET)
-    if form.is_valid():
-        context['pair'] = form.cleaned_data['pair']
+def cat_connection_permalink(request, pair_id):
+    pair = get_object_or_404(CatPhotoPair, id=pair_id)
 
-    return render_to_response('cat_connection.html', RequestContext(request, context))
+    return render_to_response('cat_connection.html', RequestContext(request, {'pair': pair}))
 
 
 def cat_side_by_side_image(request, pair_id):
     pair = get_object_or_404(CatPhotoPair, id=pair_id)
     im1 = Image.open(pair.photo1.image)
     im2 = Image.open(pair.photo2.image)
-    combined = Image.new('RGB', (800, 800))
     im1.thumbnail((400, 400))
     im2.thumbnail((400, 400))
+    combined = Image.new('RGB', (800, max(im1.size[1], im2.size[1])))
     combined.paste(im1, (0, 0))
     combined.paste(im2, (400, 0))
-    content = combined.read()
     next_week = datetime.datetime.now() + datetime.timedelta(seconds=604800)
-    response = HttpResponse(content, content_type='image/jpg')
-    response['Content-Length'] = len(content)
+    response = HttpResponse(content_type="image/jpeg")
+    combined.save(response, 'JPEG')
     response['Cache-Control'] = "max-age=604800, public"
     response['Expires'] = next_week.strftime("%a, %d %b %y %T GMT")
 
