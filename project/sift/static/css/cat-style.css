@@ -483,3 +483,11 @@ html {
     top: 50%;
     left: 30px;
 }
+
+#cat-connection-permalink-photo {
+    margin: 0 auto;
+}
+
+.cat-text-center {
+    text-align: center;
+}
