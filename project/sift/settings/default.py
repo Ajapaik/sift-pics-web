@@ -92,7 +92,7 @@ TEMPLATE_LOADERS = (
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.BrokenLinkEmailsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'project.common.middleware.ForceDefaultLanguageMiddleware',
+    'project.sift.middleware.ForceDefaultLanguageMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -100,7 +100,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'mobi.middleware.MobileDetectionMiddleware',
-    'project.common.middleware.SessionBasedLocaleWithRedirectMiddleware',
+    'project.sift.middleware.SessionBasedLocaleWithRedirectMiddleware',
     'project.sift.user_middleware.UserMiddleware',
 )
 
@@ -153,7 +153,6 @@ EXTERNAL_APPS = (
 )
 
 LOCAL_APPS = (
-    'project.common',
     'project.sift',
 )
 
@@ -200,3 +199,5 @@ HAYSTACK_CONNECTIONS = {
 FACEBOOK_APP_KEY = ''
 
 AJAPAIK_VALIMIMOODUL_URL = 'http://ajapaik.ee:8080/ajapaik-service/AjapaikService.json'
+
+ALLOWED_HOSTS = ['.sift.pics', '.ajapaik.ee']

@@ -5,12 +5,38 @@ from django.db.models import Model, CharField, SmallIntegerField, BooleanField, 
     DateTimeField, TextField, ImageField, URLField, ManyToManyField, OneToOneField, NullBooleanField
 from django.db.models.signals import post_save
 
-from project.utils import calculate_thumbnail_size
-from project.common.models import BaseSource
+
+def calculate_thumbnail_size(p_width, p_height, desired_longest_side):
+    if p_width and p_height:
+        w = float(p_width)
+        h = float(p_height)
+        desired_longest_side = float(desired_longest_side)
+        if w > h:
+            desired_width = desired_longest_side
+            factor = w / desired_longest_side
+            desired_height = h / factor
+        else:
+            desired_height = desired_longest_side
+            factor = h / desired_longest_side
+            desired_width = w / factor
+    else:
+        return 400, 300
+
+    return int(desired_width), int(desired_height)
 
 
-class Source(BaseSource):
-    pass
+class Source(Model):
+    name = CharField(max_length=255)
+    description = TextField(null=True, blank=True)
+    created = DateTimeField(auto_now_add=True)
+    modified = DateTimeField(auto_now=True)
+
+    def __unicode__(self):
+        return self.name
+
+    class Meta:
+        abstract = True
+        db_table = 'project_source'
 
 
 class CatProfile(Model):

@@ -34,19 +34,18 @@ from rest_framework.renderers import JSONRenderer
 from rest_framework.response import Response
 from rest_framework.views import exception_handler
 from sorl.thumbnail import get_thumbnail, delete
-from django.core.cache import cache
 from rest_framework import authentication
 from rest_framework import exceptions
 from django.utils.translation import ugettext as _
 
 from project.sift.forms import CatLoginForm, CatAuthForm, CatAlbumStateForm, CatTagForm, CatFavoriteForm, CatResultsFilteringForm, \
     CatPushRegisterForm, HaystackCatPhotoSearchForm, CatCuratorAlbumEditForm, CatCuratorAlbumAddForm, \
-    CatCuratorPhotoUploadForm, CatPhotoPairingForm, CatPhotoPairSelectionForm
+    CatCuratorPhotoUploadForm, CatPhotoPairingForm
 from project.sift.models import CatAlbum, CatTagPhoto, CatPhoto, CatTag, CatUserFavorite, CatPushDevice, CatProfile, Source, \
     CatPhotoPair
 from project.sift.serializers import CatResultsPhotoSerializer, CatCuratorAlbumSelectionAlbumSerializer
 from project.sift.forms import CatTaggerAlbumSelectionForm
-from project.sift.settings import SITE_ID, CAT_RESULTS_PAGE_SIZE, AJAPAIK_VALIMIMOODUL_URL, MEDIA_ROOT
+from project.sift.settings import CAT_RESULTS_PAGE_SIZE, AJAPAIK_VALIMIMOODUL_URL, MEDIA_ROOT
 
 
 class CustomAuthentication(authentication.BaseAuthentication):
@@ -1131,4 +1130,16 @@ def cat_side_by_side_image(request, pair_id, is_fb_share=0):
     response = HttpResponse(content_type="image/jpeg")
     combined.save(response, 'JPEG')
 
+    return response
+
+
+def custom_404(request):
+    response = render_to_response('404.html', {}, context_instance=RequestContext(request))
+    response.status_code = 404
+    return response
+
+
+def custom_500(request):
+    response = render_to_response('500.html', {}, context_instance=RequestContext(request))
+    response.status_code = 500
     return response
