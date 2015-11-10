@@ -35,7 +35,6 @@ class Source(Model):
         return self.name
 
     class Meta:
-        abstract = True
         db_table = 'project_source'
 
 

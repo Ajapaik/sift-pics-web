@@ -1096,6 +1096,7 @@ def cat_connect(request, first=0, second=0, back_p1=0, back_p2=0):
     context['p1'] = p1
     context['p2'] = p2
     context['connections'] = CatPhotoPair.objects.filter(Q(photo1=p1, photo2=p2) | Q(photo2=p1, photo1=p2))
+    context['is_connect'] = True
 
     return render_to_response('cat_connect.html', RequestContext(request, context))
 

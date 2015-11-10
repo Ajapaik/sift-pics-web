@@ -27,7 +27,6 @@ MEDIA_URL = '/media/'
 ADMIN_MEDIA_PREFIX = STATIC_URL + "admin/"
 
 STATICFILES_DIRS = (
-    '%s/project/static' % ABSOLUTE_PROJECT_ROOT,
     '%s/project/sift/static' % ABSOLUTE_PROJECT_ROOT,
 )
 

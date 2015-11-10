@@ -46,6 +46,10 @@
     color: white;
 }
 
+.cat-header-link:hover {
+    color: white;
+}
+
 .cat-header-link > i > svg > path:hover {
     fill: white;
 }

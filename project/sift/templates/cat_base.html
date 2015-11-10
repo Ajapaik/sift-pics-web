@@ -38,7 +38,7 @@
     <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="{% static "css/cookieconsent.min.css" %}"/>
     {% compress css %}
-        <link rel="stylesheet" href="{% static "libs/bootstrap-3.3.5/bootstrap.css" %}">
+        <link rel="stylesheet" href="{% static "libs/bootstrap-3.3.5/css/bootstrap.css" %}">
         <link rel="stylesheet" href="{% static "css/justifiedGallery-3.6.1.css" %}"/>
         <link rel="stylesheet" href="{% static "css/cat-style.css" %}"/>
     {% endcompress %}
@@ -98,7 +98,7 @@
 {% block global_js %}
     <script src="{% url 'django.views.i18n.javascript_catalog' %}?_={% now "U" %}"></script>
     {% compress js %}
-        <script src="{% static "js/jquery-2.1.14.js" %}"></script>
+        <script src="{% static "js/jquery-2.1.4.js" %}"></script>
         <script src="{% static "libs/bootstrap-3.3.5/js/bootstrap.js" %}"></script>
         <script src="{% static "js/jquery.URI-1.15.1.js" %}"></script>
         <script>

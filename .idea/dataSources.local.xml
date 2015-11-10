@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - rephoto_dev@127.0.0.1" uuid="a25f849e-a068-4e9e-bd8f-58ad96d8cb6a">
+      <secret-storage>master_key</secret-storage>
+      <user-name>rephoto</user-name>
+      <ssh-properties>
+        <enabled>true</enabled>
+        <proxy-host>ajapaik.ee</proxy-host>
+        <proxy-port>22</proxy-port>
+        <secret-storage>master_key</secret-storage>
+        <user>lauri</user>
+        <use-password>true</use-password>
+      </ssh-properties>
+    </data-source>
+  </component>
+</project>
