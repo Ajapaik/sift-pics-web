@@ -19,3 +19,26 @@ server {
                 uwsgi_pass unix:/var/garage/run/sift_pics.sock;
         }
 }
+
+# This listens to cat/v1 requests that the mobile app sends
+server {
+        listen 9010;
+        server_name sift.pics;
+
+        access_log /var/log/nginx/sift.access.log;
+        error_log /var/log/nginx/sift.error.log;
+
+        location /media  {
+                alias /var/garage/sift/media;
+        }
+
+        location /static {
+                expires 7d;
+                alias /var/garage/sift/static-collected;
+        }
+
+        location / {
+                include uwsgi_params;
+                uwsgi_pass unix:/var/garage/run/sift_pics.sock;
+        }
+}

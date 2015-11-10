@@ -97,10 +97,10 @@
 {% endif %}
 {% block global_js %}
     <script src="{% url 'django.views.i18n.javascript_catalog' %}?_={% now "U" %}"></script>
+    <script src="{% static "js/jquery.URI-1.15.1.min.js" %}"></script>
     {% compress js %}
         <script src="{% static "js/jquery-2.1.4.js" %}"></script>
         <script src="{% static "libs/bootstrap-3.3.5/js/bootstrap.js" %}"></script>
-        <script src="{% static "js/jquery.URI-1.15.1.js" %}"></script>
         <script>
             var isFiltering = '{% if is_filter %}true{% endif %}',
                 isTagger = '{% if is_tag %}true{% endif %}';

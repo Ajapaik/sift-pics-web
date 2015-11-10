@@ -1,0 +1,11 @@
+[program:sift_pics]
+command=/opt/python27/bin/uwsgi
+  --wsgi-file /var/garage/sift/project/sift/wsgihandler.py
+  --socket /var/garage/run/sift_pics.sock
+  --processes 2
+  --master
+  --max-requests 250
+  --logto /dev/null
+  --chdir /var/garage/sift
+user=www-data
+stopsignal=QUIT
