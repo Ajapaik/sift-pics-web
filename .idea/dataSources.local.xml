@@ -13,5 +13,17 @@
         <use-password>true</use-password>
       </ssh-properties>
     </data-source>
+    <data-source name="PostgreSQL - rephoto@127.0.0.1" uuid="d3f0fd81-eeaa-484c-8dcb-9cca4a73ad8e">
+      <secret-storage>master_key</secret-storage>
+      <user-name>rephoto</user-name>
+      <ssh-properties>
+        <enabled>true</enabled>
+        <proxy-host>ajapaik.ee</proxy-host>
+        <proxy-port>22</proxy-port>
+        <secret-storage>master_key</secret-storage>
+        <user>lauri</user>
+        <use-password>true</use-password>
+      </ssh-properties>
+    </data-source>
   </component>
 </project>
