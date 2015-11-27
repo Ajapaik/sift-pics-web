@@ -119,7 +119,7 @@ class CatUserFavorite(Model):
 
 
 class CatPhoto(Model):
-    title = CharField(max_length=255)
+    title = CharField(max_length=1000)
     slug = AutoSlugField(populate_from='title', always_update=True)
     description = TextField(null=True, blank=True)
     height = IntegerField(null=True, blank=True)
