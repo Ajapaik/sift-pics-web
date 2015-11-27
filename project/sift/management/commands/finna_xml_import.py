@@ -45,25 +45,31 @@ class Command(BaseCommand):
         return False
 
     def _create_photos_from_xml_response(self, xml_response):
+        problem_children = []
         for elem in xml_response:
             if elem.tag == "docs":
                 if not self._resource_already_exists(elem):
-                    new_photo = CatPhoto(
-                        title=elem.find("title").text,
-                        description=elem.find("title_sort").text,
-                        source=Source.objects.get(description=elem.find('institution').text),
-                        source_key=elem.find("identifier").text,
-                        author=elem.find("author").text,
-                        source_url=elem.find("record_link").text,
-                    )
-                    if elem.find("era_facet") is not None:
-                        new_photo.date_text = elem.find("era_facet").text
-                    opener = urllib2.build_opener()
-                    opener.addheaders = [("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.137 Safari/537.36")]
-                    img_response = opener.open(elem.find("image_links").text)
-                    new_photo.image.save("finna.jpg", ContentFile(img_response.read()))
-                    new_photo.save()
-                    self.album.photos.add(new_photo)
+                    if elem.find("identifier") is not None:
+                        new_photo = CatPhoto(
+                            title=elem.find("title").text,
+                            description=elem.find("title_sort").text,
+                            source=Source.objects.get(description=elem.find('institution').text),
+                            source_key=elem.find("identifier").text,
+                            author=elem.find("author").text,
+                            source_url=elem.find("record_link").text,
+                        )
+                        if elem.find("era_facet") is not None:
+                            new_photo.date_text = elem.find("era_facet").text
+                        opener = urllib2.build_opener()
+                        opener.addheaders = [("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.137 Safari/537.36")]
+                        img_response = opener.open(elem.find("image_links").text)
+                        new_photo.image.save("finna.jpg", ContentFile(img_response.read()))
+                        new_photo.save()
+                        self.album.photos.add(new_photo)
+                    else:
+                        problem_children.append(elem.find("title").text)
+        for each in problem_children:
+            print each
 
     def handle(self, *args, **options):
         translation.activate('sv')
