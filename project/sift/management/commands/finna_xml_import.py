@@ -46,7 +46,10 @@ class Command(BaseCommand):
 
     def _create_photos_from_xml_response(self, xml_response):
         problem_children = []
+        counter = 1
         for elem in xml_response:
+            print counter
+            counter += 1
             if elem.tag == "docs":
                 if not self._resource_already_exists(elem):
                     if elem.find("identifier") is not None:
@@ -68,8 +71,7 @@ class Command(BaseCommand):
                         self.album.photos.add(new_photo)
                     else:
                         problem_children.append(elem.find("title").text)
-        for each in problem_children:
-            print each
+        print problem_children
 
     def handle(self, *args, **options):
         translation.activate('sv')
