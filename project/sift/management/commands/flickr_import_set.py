@@ -6,7 +6,7 @@ from django.utils import translation
 from project.sift.settings import FLICKR_API_KEY
 
 # This script was made for a single use, review before running
-from sift.models import CatPhoto, Source, CatAlbum
+from project.sift.models import CatPhoto, Source, CatAlbum
 
 
 class Command(BaseCommand):
