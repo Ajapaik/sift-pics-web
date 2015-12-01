@@ -60,11 +60,12 @@ LANGUAGES = (
     ('et', gettext('Estonian')),
     ('en', gettext('English')),
     ('fi', gettext('Finnish')),
+    ('sv', gettext('Swedish')),
 )
 
-MODELTRANSLATION_LANGUAGES = ('et', 'en', 'fi')
+MODELTRANSLATION_LANGUAGES = ('et', 'en', 'fi', 'sv')
 MODELTRANSLATION_PREPOPULATE_LANGUAGE = 'et'
-MODELTRANSLATION_FALLBACK_LANGUAGES = ('fi', 'en', 'et')
+MODELTRANSLATION_FALLBACK_LANGUAGES = ('fi', 'sv', 'en', 'et')
 
 SITE_ID = 3
 

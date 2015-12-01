@@ -1,21 +1,18 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-# Translators:
-# Lauri Elias, 2015
-# Lauri Elias, 2015
-# Vahur Puik <vahur@ajapaik.ee>, 2015
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Ajapaik\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-12-01 15:37+0200\n"
-"PO-Revision-Date: 2015-10-13 13:34+0000\n"
-"Last-Translator: Lauri Elias\n"
-"Language-Team: Estonian (http://www.transifex.com/estonian-photographic-"
-"heritage-society/ajapaik/language/et/)\n"
-"Language: et\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -23,108 +20,105 @@ msgstr ""
 
 #: project/sift/static/js/cat-curator.js:68
 msgid "Not selected"
-msgstr "Pole valitud"
+msgstr ""
 
 #: project/sift/static/js/cat-curator.js:382
 msgid ""
 "Are you sure you want to create an album with less than 5 photos? We "
 "recommend to create albums with at least 10 or more pictures."
 msgstr ""
-"Oled kindel, et soovid lisada albumi vähem kui 5 fotoga? Soovitame vähemalt "
-"10 panna."
 
 #: project/sift/static/js/cat-curator.js:406
 msgid "System error"
-msgstr "Süsteemiviga"
+msgstr ""
 
 #: project/sift/static/js/cat-extra-js-translations.js:5
 msgid "Interior"
-msgstr "Sisevaade"
+msgstr ""
 
 #: project/sift/static/js/cat-extra-js-translations.js:6
 msgid "Exterior"
-msgstr "Välisvaade"
+msgstr ""
 
 #: project/sift/static/js/cat-extra-js-translations.js:7
 msgid "Urban"
-msgstr "Linn"
+msgstr ""
 
 #: project/sift/static/js/cat-extra-js-translations.js:8
 msgid "Rural"
-msgstr "Maa"
+msgstr ""
 
 #: project/sift/static/js/cat-extra-js-translations.js:9
 msgid "Manmade"
-msgstr "Ehitatud"
+msgstr ""
 
 #: project/sift/static/js/cat-extra-js-translations.js:10
 msgid "Nature"
-msgstr "Loodus"
+msgstr ""
 
 #: project/sift/static/js/cat-extra-js-translations.js:11
 msgid "Ground"
-msgstr "Maapinnalt"
+msgstr ""
 
 #: project/sift/static/js/cat-extra-js-translations.js:12
 msgid "Raised"
-msgstr "Kõrgemalt"
+msgstr ""
 
 #: project/sift/static/js/cat-extra-js-translations.js:13
 msgid "One"
-msgstr "Üks inimene"
+msgstr ""
 
 #: project/sift/static/js/cat-extra-js-translations.js:14
 msgid "Many"
-msgstr "Mitu inimest"
+msgstr ""
 
 #: project/sift/static/js/cat-extra-js-translations.js:15
 msgid "Whole"
-msgstr "Üldvaade"
+msgstr ""
 
 #: project/sift/static/js/cat-extra-js-translations.js:16
 msgid "Detail"
-msgstr "Lähivaade"
+msgstr ""
 
 #: project/sift/static/js/cat-extra-js-translations.js:17
 msgid "Staged"
-msgstr "Poseeritud"
+msgstr ""
 
 #: project/sift/static/js/cat-extra-js-translations.js:18
 msgid "Natural"
-msgstr "Loomulik"
+msgstr ""
 
 #: project/sift/static/js/cat-extra-js-translations.js:19
 msgid "Public"
-msgstr "Avalik"
+msgstr ""
 
 #: project/sift/static/js/cat-extra-js-translations.js:20
 msgid "Private"
-msgstr "Eravaldus"
+msgstr ""
 
 #: project/sift/static/js/cat-extra-js-translations.js:21
 msgid "View"
-msgstr "Vaade"
+msgstr ""
 
 #: project/sift/static/js/cat-extra-js-translations.js:22
 msgid "Social"
-msgstr "Inimesed"
+msgstr ""
 
 #: project/sift/static/js/cat-extra-js-translations.js:23
 msgid "%(pictures)s pictures in album"
-msgstr "%(pictures)s pilti albumis"
+msgstr ""
 
 #: project/sift/static/js/cat-extra-js-translations.js:24
 msgid ""
 "You have made %(decisions)s decisions about %(pictures)s pictures in this "
 "album."
 msgstr ""
-"Oled teinud %(decisions)s otsust %(pictures)s pildi kohta selles albumis."
 
 #: project/sift/static/js/cat-extra-js-translations.js:25
 #: project/sift/static/js/cat-results.js:112
 #: project/sift/static/js/cat-tagger.js:136
 msgid "You are contributor number %(rank)s."
-msgstr "Oled panustaja number %(rank)s."
+msgstr ""
 
 #: project/sift/static/js/cat-extra-js-translations.js:26
 #: project/sift/static/js/cat-results.js:111
@@ -133,4 +127,3 @@ msgid ""
 "%(users)s users have made %(decisions)s decisions about %(pictures)s "
 "pictures."
 msgstr ""
-"%(users)s kasutajat on teinud %(decisions)s otsust %(pictures)s pildi kohta."

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
   <data-source name="PostgreSQL - rephoto_dev@127.0.0.1" uuid="a25f849e-a068-4e9e-bd8f-58ad96d8cb6a">
-    <database-info product="PostgreSQL" version="8.4.22lts1" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+    <database-info product="PostgreSQL" version="8.4.22lts5" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
       <identifier-quote-string>&quot;</identifier-quote-string>
     </database-info>
     <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact"/>
@@ -1965,8 +1965,6 @@
       <primary-key name="auth_group_pkey" columns="id"/>
       <exported-key name="auth_group_permissio_group_id_689710a9a73b7457_fk_auth_group_id" table="auth_group_permissions" schema="public" catalog="rephoto_dev" columns="group_id"/>
       <exported-key name="auth_user_groups_group_id_33ac548dcf5f8e37_fk_auth_group_id" table="auth_user_groups" schema="public" catalog="rephoto_dev" columns="group_id"/>
-      <exported-key name="auth_group_permissio_group_id_689710a9a73b7457_fk_auth_group_id" table="auth_group_permissions" schema="public" catalog="rephoto_dev" columns="group_id"/>
-      <exported-key name="auth_user_groups_group_id_33ac548dcf5f8e37_fk_auth_group_id" table="auth_user_groups" schema="public" catalog="rephoto_dev" columns="group_id"/>
       <index name="auth_group_name_key" unique="true" columns="name"/>
       <index name="auth_group_name_253ae2a6331666e8_like" unique="false" columns="name"/>
     </table>
@@ -2014,8 +2012,6 @@
       <foreign-key name="auth_content_type_id_508cf46651277a81_fk_django_content_type_id" columns="content_type_id" ref-table="django_content_type" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
       <exported-key name="auth_group_permission_id_1f49ccbbdc69d2fc_fk_auth_permission_id" table="auth_group_permissions" schema="public" catalog="rephoto_dev" columns="permission_id"/>
       <exported-key name="auth_user__permission_id_384b62483d7071f0_fk_auth_permission_id" table="auth_user_user_permissions" schema="public" catalog="rephoto_dev" columns="permission_id"/>
-      <exported-key name="auth_group_permission_id_1f49ccbbdc69d2fc_fk_auth_permission_id" table="auth_group_permissions" schema="public" catalog="rephoto_dev" columns="permission_id"/>
-      <exported-key name="auth_user__permission_id_384b62483d7071f0_fk_auth_permission_id" table="auth_user_user_permissions" schema="public" catalog="rephoto_dev" columns="permission_id"/>
       <index name="auth_permission_content_type_id_key" unique="true" columns="content_type_id,codename"/>
       <index name="auth_permission_417f1b1c" unique="false" columns="content_type_id"/>
     </table>
@@ -2044,13 +2040,6 @@
       <column name="is_active" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
       <column name="date_joined" sqlType="timestamptz" precision="35" scale="6" nullable="false" jdbcType="93"/>
       <primary-key name="auth_user_pkey" columns="id"/>
-      <exported-key name="auth_user_groups_user_id_4b5ed4ffdb8fd9b0_fk_auth_user_id" table="auth_user_groups" schema="public" catalog="rephoto_dev" columns="user_id"/>
-      <exported-key name="auth_user_user_permiss_user_id_7f0938558328534a_fk_auth_user_id" table="auth_user_user_permissions" schema="public" catalog="rephoto_dev" columns="user_id"/>
-      <exported-key name="django_admin_log_user_id_52fdd58701c5f563_fk_auth_user_id" table="django_admin_log" schema="public" catalog="rephoto_dev" columns="user_id"/>
-      <exported-key name="project_catprofile_user_id_fkey" table="project_catprofile" schema="public" catalog="rephoto_dev" columns="user_id"/>
-      <exported-key name="project_credentialsmodel_id_id_6505926251c81130_fk_auth_user_id" table="project_credentialsmodel" schema="public" catalog="rephoto_dev" columns="id_id"/>
-      <exported-key name="project_flowmodel_id_id_b64449a8f28e44b_fk_auth_user_id" table="project_flowmodel" schema="public" catalog="rephoto_dev" columns="id_id"/>
-      <exported-key name="project_profile_user_id_73ccf52249922849_fk_auth_user_id" table="project_profile" schema="public" catalog="rephoto_dev" columns="user_id"/>
       <exported-key name="auth_user_groups_user_id_4b5ed4ffdb8fd9b0_fk_auth_user_id" table="auth_user_groups" schema="public" catalog="rephoto_dev" columns="user_id"/>
       <exported-key name="auth_user_user_permiss_user_id_7f0938558328534a_fk_auth_user_id" table="auth_user_user_permissions" schema="public" catalog="rephoto_dev" columns="user_id"/>
       <exported-key name="django_admin_log_user_id_52fdd58701c5f563_fk_auth_user_id" table="django_admin_log" schema="public" catalog="rephoto_dev" columns="user_id"/>
@@ -2119,7 +2108,7 @@
       <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
       <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
     </table>
-    <table name="dblink_pkey_results" schema="public" catalog="rephoto_dev" type="OBJECT TYPE">
+    <table name="dblink_pkey_results" schema="public" catalog="rephoto_dev" type="TABLE">
       <column name="position" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="colname" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
     </table>
@@ -2156,9 +2145,6 @@
       <column name="app_label" sqlType="varchar" precision="100" scale="0" nullable="false" jdbcType="12"/>
       <column name="model" sqlType="varchar" precision="100" scale="0" nullable="false" jdbcType="12"/>
       <primary-key name="django_content_type_pkey" columns="id"/>
-      <exported-key name="auth_content_type_id_508cf46651277a81_fk_django_content_type_id" table="auth_permission" schema="public" catalog="rephoto_dev" columns="content_type_id"/>
-      <exported-key name="djan_content_type_id_697914295151027a_fk_django_content_type_id" table="django_admin_log" schema="public" catalog="rephoto_dev" columns="content_type_id"/>
-      <exported-key name="proj_related_type_id_39244d75370f00ec_fk_django_content_type_id" table="project_action" schema="public" catalog="rephoto_dev" columns="related_type_id"/>
       <exported-key name="auth_content_type_id_508cf46651277a81_fk_django_content_type_id" table="auth_permission" schema="public" catalog="rephoto_dev" columns="content_type_id"/>
       <exported-key name="djan_content_type_id_697914295151027a_fk_django_content_type_id" table="django_admin_log" schema="public" catalog="rephoto_dev" columns="content_type_id"/>
       <exported-key name="proj_related_type_id_39244d75370f00ec_fk_django_content_type_id" table="project_action" schema="public" catalog="rephoto_dev" columns="related_type_id"/>
@@ -2240,7 +2226,7 @@
       <column name="type" sqlType="varchar" precision="30" scale="0" nullable="false" jdbcType="12"/>
       <primary-key name="geometry_columns_pk" columns="f_table_catalog,f_table_schema,f_table_name,f_geometry_column"/>
     </table>
-    <table name="geometry_dump" schema="public" catalog="rephoto_dev" type="OBJECT TYPE">
+    <table name="geometry_dump" schema="public" catalog="rephoto_dev" type="TABLE">
       <column name="path" sqlType="_int4" precision="10" scale="0" nullable="true" jdbcType="2003"/>
       <column name="geom" sqlType="geometry" precision="2147483647" scale="0" nullable="true" jdbcType="1111"/>
     </table>
@@ -2299,9 +2285,6 @@
       <foreign-key name="project_albu_subalbum_of_id_899fd34e68943ca_fk_project_album_id" columns="subalbum_of_id" ref-table="project_album" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
       <foreign-key name="project_alb_cover_photo_id_392d31f80eb08493_fk_project_photo_id" columns="cover_photo_id" ref-table="project_photo" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
       <foreign-key name="project__profile_id_6c47d2804fb191cc_fk_project_profile_user_id" columns="profile_id" ref-table="project_profile" ref-schema="public" ref-catalog="" ref-columns="user_id" update-rule="3" delete-rule="3" deferrability="1"/>
-      <exported-key name="project_albu_subalbum_of_id_899fd34e68943ca_fk_project_album_id" table="project_album" schema="public" catalog="rephoto_dev" columns="subalbum_of_id"/>
-      <exported-key name="project_albumphot_album_id_54d197f7aba18631_fk_project_album_id" table="project_albumphoto" schema="public" catalog="rephoto_dev" columns="album_id"/>
-      <exported-key name="project_points_album_id_3094c4b9a9da4d0d_fk_project_album_id" table="project_points" schema="public" catalog="rephoto_dev" columns="album_id"/>
       <exported-key name="project_albu_subalbum_of_id_899fd34e68943ca_fk_project_album_id" table="project_album" schema="public" catalog="rephoto_dev" columns="subalbum_of_id"/>
       <exported-key name="project_albumphot_album_id_54d197f7aba18631_fk_project_album_id" table="project_albumphoto" schema="public" catalog="rephoto_dev" columns="album_id"/>
       <exported-key name="project_points_album_id_3094c4b9a9da4d0d_fk_project_album_id" table="project_points" schema="public" catalog="rephoto_dev" columns="album_id"/>
@@ -2365,7 +2348,6 @@
       <column name="name_de" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="project_city_pkey" columns="id"/>
       <exported-key name="project_photo_area_id_305d99f7125a2396_fk_project_area_id" table="project_photo" schema="public" catalog="rephoto_dev" columns="area_id"/>
-      <exported-key name="project_photo_area_id_305d99f7125a2396_fk_project_area_id" table="project_photo" schema="public" catalog="rephoto_dev" columns="area_id"/>
     </table>
     <table name="project_catalbum" schema="public" catalog="rephoto_dev" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgncHJvamVjdF9jYXRhbGJ1bV9pZF9zZXEnOjpyZWdjbGFzcyk=" autoIncrement="true"/>
@@ -2378,16 +2360,20 @@
       <column name="subtitle_fi" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="subtitle_nl" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="subtitle_ru" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="subtitle_sv" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="title_en" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="title_et" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="title_fi" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="title_nl" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="title_ru" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="title_sv" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="subtitle_de" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="title_de" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="project_catalbum_pkey" columns="id"/>
+      <exported-key name="project_cat_catalbum_id_3f3338b31c519005_fk_project_catalbum_id" table="project_catalbum_photos" schema="public" catalog="rephoto_dev" columns="catalbum_id"/>
+      <exported-key name="project_cattag_album_id_57097a5260e0e9ab_fk_project_catalbum_id" table="project_cattagphoto" schema="public" catalog="rephoto_dev" columns="album_id"/>
+      <exported-key name="project_catuse_album_id_4c1ca45ff3d5d306_fk_project_catalbum_id" table="project_catuserfavorite" schema="public" catalog="rephoto_dev" columns="album_id"/>
+      <exported-key name="project_cat_catalbum_id_3f3338b31c519005_fk_project_catalbum_id" table="project_catalbum_photos" schema="public" catalog="rephoto_dev" columns="catalbum_id"/>
+      <exported-key name="project_cattag_album_id_57097a5260e0e9ab_fk_project_catalbum_id" table="project_cattagphoto" schema="public" catalog="rephoto_dev" columns="album_id"/>
+      <exported-key name="project_catuse_album_id_4c1ca45ff3d5d306_fk_project_catalbum_id" table="project_catuserfavorite" schema="public" catalog="rephoto_dev" columns="album_id"/>
       <exported-key name="project_cat_catalbum_id_3f3338b31c519005_fk_project_catalbum_id" table="project_catalbum_photos" schema="public" catalog="rephoto_dev" columns="catalbum_id"/>
       <exported-key name="project_cattag_album_id_57097a5260e0e9ab_fk_project_catalbum_id" table="project_cattagphoto" schema="public" catalog="rephoto_dev" columns="album_id"/>
       <exported-key name="project_catuse_album_id_4c1ca45ff3d5d306_fk_project_catalbum_id" table="project_catuserfavorite" schema="public" catalog="rephoto_dev" columns="album_id"/>
@@ -2481,12 +2467,6 @@
       <exported-key name="project_catph_photo2_id_3d4d3d10c9f4e808_fk_project_catphoto_id" table="project_catphotopair" schema="public" catalog="rephoto_dev" columns="photo2_id"/>
       <exported-key name="project_cattagp_photo_id_fd9c2a28e31b8de_fk_project_catphoto_id" table="project_cattagphoto" schema="public" catalog="rephoto_dev" columns="photo_id"/>
       <exported-key name="project_catuse_photo_id_5db1fe63075010f1_fk_project_catphoto_id" table="project_catuserfavorite" schema="public" catalog="rephoto_dev" columns="photo_id"/>
-      <exported-key name="project_cat_catphoto_id_136f763b85ee95b8_fk_project_catphoto_id" table="project_catalbum_photos" schema="public" catalog="rephoto_dev" columns="catphoto_id"/>
-      <exported-key name="project_catapp_photo_id_7bd5002c09714431_fk_project_catphoto_id" table="project_catappliedtag" schema="public" catalog="rephoto_dev" columns="photo_id"/>
-      <exported-key name="project_catph_photo1_id_140b32dba52e7f4b_fk_project_catphoto_id" table="project_catphotopair" schema="public" catalog="rephoto_dev" columns="photo1_id"/>
-      <exported-key name="project_catph_photo2_id_3d4d3d10c9f4e808_fk_project_catphoto_id" table="project_catphotopair" schema="public" catalog="rephoto_dev" columns="photo2_id"/>
-      <exported-key name="project_cattagp_photo_id_fd9c2a28e31b8de_fk_project_catphoto_id" table="project_cattagphoto" schema="public" catalog="rephoto_dev" columns="photo_id"/>
-      <exported-key name="project_catuse_photo_id_5db1fe63075010f1_fk_project_catphoto_id" table="project_catuserfavorite" schema="public" catalog="rephoto_dev" columns="photo_id"/>
       <index name="project_catphoto_0afd9202" unique="false" columns="source_id"/>
       <index name="project_catphoto_2dbcba41" unique="false" columns="slug"/>
     </table>
@@ -2538,10 +2518,6 @@
       <exported-key name="project_catpushdevice_profile_id_fkey" table="project_catpushdevice" schema="public" catalog="rephoto_dev" columns="profile_id"/>
       <exported-key name="project_cattagphoto_profile_id_fkey" table="project_cattagphoto" schema="public" catalog="rephoto_dev" columns="profile_id"/>
       <exported-key name="project_catuserfavorite_profile_id_fkey" table="project_catuserfavorite" schema="public" catalog="rephoto_dev" columns="profile_id"/>
-      <exported-key name="proje_profile_id_42975e03512956ec_fk_project_catprofile_user_id" table="project_catphotopair" schema="public" catalog="rephoto_dev" columns="profile_id"/>
-      <exported-key name="project_catpushdevice_profile_id_fkey" table="project_catpushdevice" schema="public" catalog="rephoto_dev" columns="profile_id"/>
-      <exported-key name="project_cattagphoto_profile_id_fkey" table="project_cattagphoto" schema="public" catalog="rephoto_dev" columns="profile_id"/>
-      <exported-key name="project_catuserfavorite_profile_id_fkey" table="project_catuserfavorite" schema="public" catalog="rephoto_dev" columns="profile_id"/>
       <index name="unique_user_id" unique="true" columns="user_id"/>
     </table>
     <table name="project_catpushdevice" schema="public" catalog="rephoto_dev" type="TABLE">
@@ -2571,7 +2547,6 @@
       <column name="name" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <primary-key name="project_catrealtag_pkey" columns="id"/>
       <exported-key name="project_catapp_tag_id_470e928480bcbbef_fk_project_catrealtag_id" table="project_catappliedtag" schema="public" catalog="rephoto_dev" columns="tag_id"/>
-      <exported-key name="project_catapp_tag_id_470e928480bcbbef_fk_project_catrealtag_id" table="project_catappliedtag" schema="public" catalog="rephoto_dev" columns="tag_id"/>
       <index name="project_catrealtag_name_key" unique="true" columns="name"/>
       <index name="project_catrealtag_name_1ac9ebf9f3f298b0_like" unique="false" columns="name"/>
     </table>
@@ -2593,7 +2568,6 @@
       <column name="level" sqlType="int2" precision="5" scale="0" nullable="true" jdbcType="5"/>
       <column name="active" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
       <primary-key name="project_cattag_pkey" columns="id"/>
-      <exported-key name="project_cattagphot_tag_id_3c9f3880d556bcf0_fk_project_cattag_id" table="project_cattagphoto" schema="public" catalog="rephoto_dev" columns="tag_id"/>
       <exported-key name="project_cattagphot_tag_id_3c9f3880d556bcf0_fk_project_cattag_id" table="project_cattagphoto" schema="public" catalog="rephoto_dev" columns="tag_id"/>
       <index name="project_cattag_name_56c9614b14ba8a9c_uniq" unique="true" columns="name"/>
     </table>
@@ -2705,7 +2679,6 @@
       <foreign-key name="project_dating_photo_id_6e69c1546be9f0ae_fk_project_photo_id" columns="photo_id" ref-table="project_photo" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
       <foreign-key name="project__profile_id_6dfcc694148be1a5_fk_project_profile_user_id" columns="profile_id" ref-table="project_profile" ref-schema="public" ref-catalog="" ref-columns="user_id" update-rule="3" delete-rule="3" deferrability="1"/>
       <exported-key name="project_points_dating_id_5c4e5d4d0a38e9a8_fk_project_dating_id" table="project_points" schema="public" catalog="rephoto_dev" columns="dating_id"/>
-      <exported-key name="project_points_dating_id_5c4e5d4d0a38e9a8_fk_project_dating_id" table="project_points" schema="public" catalog="rephoto_dev" columns="dating_id"/>
       <index name="project_dating_83a0eb3f" unique="false" columns="profile_id"/>
       <index name="project_dating_b4e75e23" unique="false" columns="photo_id"/>
     </table>
@@ -2729,7 +2702,6 @@
       <column name="lens_model" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="software" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="project_device_pkey" columns="id"/>
-      <exported-key name="project_photo_device_id_7e51a1ea374eb15d_fk_project_device_id" table="project_photo" schema="public" catalog="rephoto_dev" columns="device_id"/>
       <exported-key name="project_photo_device_id_7e51a1ea374eb15d_fk_project_device_id" table="project_photo" schema="public" catalog="rephoto_dev" columns="device_id"/>
     </table>
     <table name="project_device_id_seq" schema="public" catalog="rephoto_dev" type="SEQUENCE">
@@ -2827,8 +2799,6 @@
       <primary-key name="project_geotag_pkey" columns="id"/>
       <foreign-key name="project_geotag_photo_id_52164a0d4ac3b7d6_fk_project_photo_id" columns="photo_id" ref-table="project_photo" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
       <foreign-key name="project_geo_user_id_3c59c9db27166196_fk_project_profile_user_id" columns="user_id" ref-table="project_profile" ref-schema="public" ref-catalog="" ref-columns="user_id" update-rule="3" delete-rule="3" deferrability="1"/>
-      <exported-key name="project_difficu_geotag_id_3ea7ab394d2bdd69_fk_project_geotag_id" table="project_difficultyfeedback" schema="public" catalog="rephoto_dev" columns="geotag_id"/>
-      <exported-key name="project_points_geotag_id_5c2fd0ad198538a4_fk_project_geotag_id" table="project_points" schema="public" catalog="rephoto_dev" columns="geotag_id"/>
       <exported-key name="project_difficu_geotag_id_3ea7ab394d2bdd69_fk_project_geotag_id" table="project_difficultyfeedback" schema="public" catalog="rephoto_dev" columns="geotag_id"/>
       <exported-key name="project_points_geotag_id_5c2fd0ad198538a4_fk_project_geotag_id" table="project_points" schema="public" catalog="rephoto_dev" columns="geotag_id"/>
       <index name="project_geotag_b4e75e23" unique="false" columns="photo_id"/>
@@ -3000,18 +2970,6 @@
       <exported-key name="project_photometa_photo_id_1a31799a2c5c52e6_fk_project_photo_id" table="project_photometadataupdate" schema="public" catalog="rephoto_dev" columns="photo_id"/>
       <exported-key name="project_points_photo_id_62eaefad070b3856_fk_project_photo_id" table="project_points" schema="public" catalog="rephoto_dev" columns="photo_id"/>
       <exported-key name="project_skip_photo_id_301fbd5ab7d1e43c_fk_project_photo_id" table="project_skip" schema="public" catalog="rephoto_dev" columns="photo_id"/>
-      <exported-key name="ajapaik_photolike_photo_id_4c67e6e9e45f4cb_fk_project_photo_id" table="ajapaik_photolike" schema="public" catalog="rephoto_dev" columns="photo_id"/>
-      <exported-key name="project_alb_cover_photo_id_392d31f80eb08493_fk_project_photo_id" table="project_album" schema="public" catalog="rephoto_dev" columns="cover_photo_id"/>
-      <exported-key name="project_albumphot_photo_id_6be40fc939f5bfb4_fk_project_photo_id" table="project_albumphoto" schema="public" catalog="rephoto_dev" columns="photo_id"/>
-      <exported-key name="project_dating_photo_id_6e69c1546be9f0ae_fk_project_photo_id" table="project_dating" schema="public" catalog="rephoto_dev" columns="photo_id"/>
-      <exported-key name="project_difficult_photo_id_3f5e9d87526bb19d_fk_project_photo_id" table="project_difficultyfeedback" schema="public" catalog="rephoto_dev" columns="photo_id"/>
-      <exported-key name="project_flipfeedb_photo_id_14496841635bed95_fk_project_photo_id" table="project_flipfeedback" schema="public" catalog="rephoto_dev" columns="photo_id"/>
-      <exported-key name="project_geotag_photo_id_52164a0d4ac3b7d6_fk_project_photo_id" table="project_geotag" schema="public" catalog="rephoto_dev" columns="photo_id"/>
-      <exported-key name="project_phot_rephoto_of_id_5e2d1a51ea5bc1f4_fk_project_photo_id" table="project_photo" schema="public" catalog="rephoto_dev" columns="rephoto_of_id"/>
-      <exported-key name="project_photocomm_photo_id_400c5e561322c54a_fk_project_photo_id" table="project_photocomment" schema="public" catalog="rephoto_dev" columns="photo_id"/>
-      <exported-key name="project_photometa_photo_id_1a31799a2c5c52e6_fk_project_photo_id" table="project_photometadataupdate" schema="public" catalog="rephoto_dev" columns="photo_id"/>
-      <exported-key name="project_points_photo_id_62eaefad070b3856_fk_project_photo_id" table="project_points" schema="public" catalog="rephoto_dev" columns="photo_id"/>
-      <exported-key name="project_skip_photo_id_301fbd5ab7d1e43c_fk_project_photo_id" table="project_skip" schema="public" catalog="rephoto_dev" columns="photo_id"/>
       <index name="project_photo_022cb6b8" unique="false" columns="view_count"/>
       <index name="project_photo_0afd9202" unique="false" columns="source_id"/>
       <index name="project_photo_373f7da5" unique="false" columns="like_count"/>
@@ -3160,16 +3118,6 @@
       <exported-key name="project_pho_user_id_703f5e342af42778_fk_project_profile_user_id" table="project_photo" schema="public" catalog="rephoto_dev" columns="user_id"/>
       <exported-key name="project_poi_user_id_548275cebbec6216_fk_project_profile_user_id" table="project_points" schema="public" catalog="rephoto_dev" columns="user_id"/>
       <exported-key name="project_ski_user_id_4a9fdc21feaa3804_fk_project_profile_user_id" table="project_skip" schema="public" catalog="rephoto_dev" columns="user_id"/>
-      <exported-key name="ajapaik__profile_id_593321d57e84e0d4_fk_project_profile_user_id" table="ajapaik_photolike" schema="public" catalog="rephoto_dev" columns="profile_id"/>
-      <exported-key name="project__profile_id_6c47d2804fb191cc_fk_project_profile_user_id" table="project_album" schema="public" catalog="rephoto_dev" columns="profile_id"/>
-      <exported-key name="project_a_profile_id_a62b86ce9834eab_fk_project_profile_user_id" table="project_albumphoto" schema="public" catalog="rephoto_dev" columns="profile_id"/>
-      <exported-key name="project__profile_id_6dfcc694148be1a5_fk_project_profile_user_id" table="project_dating" schema="public" catalog="rephoto_dev" columns="profile_id"/>
-      <exported-key name="pro_user_profile_id_748683434a553579_fk_project_profile_user_id" table="project_difficultyfeedback" schema="public" catalog="rephoto_dev" columns="user_profile_id"/>
-      <exported-key name="pro_user_profile_id_4c85a97bde364b41_fk_project_profile_user_id" table="project_flipfeedback" schema="public" catalog="rephoto_dev" columns="user_profile_id"/>
-      <exported-key name="project_geo_user_id_3c59c9db27166196_fk_project_profile_user_id" table="project_geotag" schema="public" catalog="rephoto_dev" columns="user_id"/>
-      <exported-key name="project_pho_user_id_703f5e342af42778_fk_project_profile_user_id" table="project_photo" schema="public" catalog="rephoto_dev" columns="user_id"/>
-      <exported-key name="project_poi_user_id_548275cebbec6216_fk_project_profile_user_id" table="project_points" schema="public" catalog="rephoto_dev" columns="user_id"/>
-      <exported-key name="project_ski_user_id_4a9fdc21feaa3804_fk_project_profile_user_id" table="project_skip" schema="public" catalog="rephoto_dev" columns="user_id"/>
     </table>
     <table name="project_skip" schema="public" catalog="rephoto_dev" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgncHJvamVjdF9za2lwX2lkX3NlcSc6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
@@ -3201,8 +3149,6 @@
       <column name="created" sqlType="timestamptz" precision="35" scale="6" nullable="false" jdbcType="93"/>
       <column name="modified" sqlType="timestamptz" precision="35" scale="6" nullable="false" jdbcType="93"/>
       <primary-key name="project_source_pkey" columns="id"/>
-      <exported-key name="project_catphot_source_id_291af6e9e56096f3_fk_project_source_id" table="project_catphoto" schema="public" catalog="rephoto_dev" columns="source_id"/>
-      <exported-key name="project_photo_source_id_6c599e3e9dc93b2c_fk_project_source_id" table="project_photo" schema="public" catalog="rephoto_dev" columns="source_id"/>
       <exported-key name="project_catphot_source_id_291af6e9e56096f3_fk_project_source_id" table="project_catphoto" schema="public" catalog="rephoto_dev" columns="source_id"/>
       <exported-key name="project_photo_source_id_6c599e3e9dc93b2c_fk_project_source_id" table="project_photo" schema="public" catalog="rephoto_dev" columns="source_id"/>
     </table>
@@ -21745,7 +21691,7 @@
       <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
       <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
     </table>
-    <table name="dblink_pkey_results" schema="public" catalog="rephoto" type="OBJECT TYPE">
+    <table name="dblink_pkey_results" schema="public" catalog="rephoto" type="TABLE">
       <column name="position" sqlType="int4" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="colname" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
     </table>
@@ -21866,7 +21812,7 @@
       <column name="type" sqlType="varchar" precision="30" scale="0" nullable="false" jdbcType="12"/>
       <primary-key name="geometry_columns_pk" columns="f_table_catalog,f_table_schema,f_table_name,f_geometry_column"/>
     </table>
-    <table name="geometry_dump" schema="public" catalog="rephoto" type="OBJECT TYPE">
+    <table name="geometry_dump" schema="public" catalog="rephoto" type="TABLE">
       <column name="path" sqlType="_int4" precision="10" scale="0" nullable="true" jdbcType="2003"/>
       <column name="geom" sqlType="geometry" precision="2147483647" scale="0" nullable="true" jdbcType="1111"/>
     </table>

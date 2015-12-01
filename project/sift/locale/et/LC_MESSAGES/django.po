@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ajapaik\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-26 16:25+0200\n"
+"POT-Creation-Date: 2015-12-01 15:37+0200\n"
 "PO-Revision-Date: 2015-10-16 10:28+0000\n"
 "Last-Translator: Lauri Elias\n"
 "Language-Team: Estonian (http://www.transifex.com/estonian-photographic-"
@@ -21,17 +21,21 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: project/sift/settings/default.py:61
+#: project/sift/settings/default.py:60
 msgid "Estonian"
 msgstr "Eesti"
 
-#: project/sift/settings/default.py:62
+#: project/sift/settings/default.py:61
 msgid "English"
 msgstr "Inglise"
 
-#: project/sift/settings/default.py:63
+#: project/sift/settings/default.py:62
 msgid "Finnish"
 msgstr "Soome"
+
+#: project/sift/settings/default.py:63
+msgid "Swedish"
+msgstr ""
 
 #: project/sift/templates/404.html:5 project/sift/templates/404.html.py:11
 msgid "Page Not Found"
@@ -105,38 +109,42 @@ msgid "All pictures"
 msgstr "Kõik pildid"
 
 #: project/sift/templates/_cat_header.html:46
-#: project/sift/templates/_cat_header.html:79
+#: project/sift/templates/_cat_header.html:84
 msgid "Tag photos"
 msgstr "Sorteeri fotosid"
 
 #: project/sift/templates/_cat_header.html:51
-#: project/sift/templates/_cat_header.html:84
+#: project/sift/templates/_cat_header.html:89
 msgid "Filter by tags"
 msgstr "Filtreeri"
 
-#: project/sift/templates/_cat_header.html:61
-#: project/sift/templates/_cat_header.html:94
+#: project/sift/templates/_cat_header.html:60
+msgid "Make connections"
+msgstr ""
+
+#: project/sift/templates/_cat_header.html:66
+#: project/sift/templates/_cat_header.html:99
 msgid "Curate photos"
 msgstr "Kureeri fotosid"
 
-#: project/sift/templates/_cat_header.html:70
+#: project/sift/templates/_cat_header.html:75
 msgid "Toggle navigation"
 msgstr "Näita/peida navigatsioon"
 
-#: project/sift/templates/_cat_header.html:100
+#: project/sift/templates/_cat_header.html:105
 msgid "Sift.pics on Google Play"
 msgstr "Sift.pics rakendus Google Play poes"
 
-#: project/sift/templates/_cat_header.html:110
+#: project/sift/templates/_cat_header.html:115
 #: project/sift/templates/cat_about.html:22
 msgid "Sift.pics on Facebook"
 msgstr "Sift.pics Facebookis"
 
-#: project/sift/templates/_cat_header.html:120 project/sift/views.py:666
+#: project/sift/templates/_cat_header.html:125 project/sift/views.py:660
 msgid "About"
 msgstr "Meist"
 
-#: project/sift/templates/_cat_header.html:127
+#: project/sift/templates/_cat_header.html:132
 msgid "Choose language"
 msgstr "Vali keel"
 
@@ -247,11 +255,11 @@ msgstr "Sift.pics piltide kategoriseerimise rakendus Ajapaigalt"
 msgid "tagging,historic,old,photos,pictures"
 msgstr "täägimine,ajaloolised,vanad,fotod,pildid"
 
-#: project/sift/templates/cat_base.html:86
+#: project/sift/templates/cat_base.html:95
 msgid "feedback"
 msgstr "tagasiside"
 
-#: project/sift/templates/cat_base.html:108
+#: project/sift/templates/cat_base.html:126
 msgid ""
 "This website uses cookies to ensure you get the best experience on our "
 "website"
@@ -259,13 +267,25 @@ msgstr ""
 "Sift.pics veebileht kasutab küpsiseid. Lehte kasutades peate sellega "
 "leppima ;)"
 
-#: project/sift/templates/cat_base.html:109
+#: project/sift/templates/cat_base.html:127
 msgid "Got it!"
 msgstr "Mis siis ikka!"
 
-#: project/sift/templates/cat_base.html:110
+#: project/sift/templates/cat_base.html:128
 msgid "More info"
 msgstr "Täpsem info"
+
+#: project/sift/templates/cat_connect.html:35
+msgid "What is the connection? Anything goes."
+msgstr ""
+
+#: project/sift/templates/cat_connect.html:38
+msgid "Connect"
+msgstr ""
+
+#: project/sift/templates/cat_connect.html:44
+msgid "Existing connections"
+msgstr ""
 
 #: project/sift/templates/cat_curator.html:19
 #: project/sift/templates/cat_results.html:16
@@ -394,212 +414,212 @@ msgstr "Lehekülg"
 msgid "Next"
 msgstr "Järgmine"
 
-#: project/sift/templates/cat_results.html:76 project/sift/views.py:640
-#: project/sift/views.py:642
+#: project/sift/templates/cat_results.html:76 project/sift/views.py:634
+#: project/sift/views.py:636
 msgid "Filter photos by tags"
 msgstr "Filtreeri fotosid kategooriate alusel"
 
-#: project/sift/templates/cat_tagger.html:98 project/sift/views.py:678
-#: project/sift/views.py:683
+#: project/sift/templates/cat_tagger.html:98 project/sift/views.py:672
+#: project/sift/views.py:677
 msgid "Tag historic photos"
 msgstr "Kategoriseeri vanu fotosid"
 
-#: project/sift/views.py:487
+#: project/sift/views.py:481
 msgid "Interior"
 msgstr "Sisevaade"
 
-#: project/sift/views.py:488
+#: project/sift/views.py:482
 msgid "Exterior"
 msgstr "Välisvaade"
 
-#: project/sift/views.py:489
+#: project/sift/views.py:483
 msgid "View"
 msgstr "Vaade"
 
-#: project/sift/views.py:490
+#: project/sift/views.py:484
 msgid "Social"
 msgstr "Inimesed"
 
-#: project/sift/views.py:491
+#: project/sift/views.py:485
 msgid "Ground"
 msgstr "Maapinnalt"
 
-#: project/sift/views.py:492
+#: project/sift/views.py:486
 msgid "Raised"
 msgstr "Kõrgemalt"
 
-#: project/sift/views.py:493
+#: project/sift/views.py:487
 msgid "Rural"
 msgstr "Maa"
 
-#: project/sift/views.py:494
+#: project/sift/views.py:488
 msgid "Urban"
 msgstr "Linn"
 
-#: project/sift/views.py:495
+#: project/sift/views.py:489
 msgid "One"
 msgstr "Üks inimene"
 
-#: project/sift/views.py:496
+#: project/sift/views.py:490
 msgid "Many"
 msgstr "Mitu inimest"
 
-#: project/sift/views.py:497
+#: project/sift/views.py:491
 msgid "Public"
 msgstr "Avalik"
 
-#: project/sift/views.py:498
+#: project/sift/views.py:492
 msgid "Private"
 msgstr "Era"
 
-#: project/sift/views.py:499
+#: project/sift/views.py:493
 msgid "Whole"
 msgstr "Üldvaade"
 
-#: project/sift/views.py:500
+#: project/sift/views.py:494
 msgid "Detail"
 msgstr "Lähivaade"
 
-#: project/sift/views.py:501
+#: project/sift/views.py:495
 msgid "Staged"
 msgstr "Poseeritud"
 
-#: project/sift/views.py:502
+#: project/sift/views.py:496
 msgid "Natural"
 msgstr "Loomulik"
 
-#: project/sift/views.py:503
+#: project/sift/views.py:497
 msgid "Manmade"
 msgstr "Ehitatud"
 
-#: project/sift/views.py:504
+#: project/sift/views.py:498
 msgid "Nature"
 msgstr "Loodus"
 
-#: project/sift/views.py:506
+#: project/sift/views.py:500
 msgid "interior"
 msgstr "sisevaade"
 
-#: project/sift/views.py:507
+#: project/sift/views.py:501
 msgid "exterior"
 msgstr "välisvaade"
 
-#: project/sift/views.py:508
+#: project/sift/views.py:502
 msgid "view"
 msgstr "vaade"
 
-#: project/sift/views.py:509
+#: project/sift/views.py:503
 msgid "social"
 msgstr "inimesed"
 
-#: project/sift/views.py:510
+#: project/sift/views.py:504
 msgid "ground"
 msgstr "maapinnalt"
 
-#: project/sift/views.py:511
+#: project/sift/views.py:505
 msgid "raised"
 msgstr "kõrgemalt"
 
-#: project/sift/views.py:512
+#: project/sift/views.py:506
 msgid "rural"
 msgstr "maa"
 
-#: project/sift/views.py:513
+#: project/sift/views.py:507
 msgid "urban"
 msgstr "linn"
 
-#: project/sift/views.py:514
+#: project/sift/views.py:508
 msgid "one"
 msgstr "üks inimene"
 
-#: project/sift/views.py:515
+#: project/sift/views.py:509
 msgid "many"
 msgstr "mitu inimest"
 
-#: project/sift/views.py:516
+#: project/sift/views.py:510
 msgid "public"
 msgstr "avalik"
 
-#: project/sift/views.py:517
+#: project/sift/views.py:511
 msgid "private"
 msgstr "era"
 
-#: project/sift/views.py:518
+#: project/sift/views.py:512
 msgid "whole"
 msgstr "üldvaade"
 
-#: project/sift/views.py:519
+#: project/sift/views.py:513
 msgid "detail"
 msgstr "lähivaade"
 
-#: project/sift/views.py:520
+#: project/sift/views.py:514
 msgid "staged"
 msgstr "poseeritud"
 
-#: project/sift/views.py:521
+#: project/sift/views.py:515
 msgid "natural"
 msgstr "loomulik"
 
-#: project/sift/views.py:522
+#: project/sift/views.py:516
 msgid "manmade"
 msgstr "ehitatud"
 
-#: project/sift/views.py:523
+#: project/sift/views.py:517
 msgid "nature"
 msgstr "loodus"
 
-#: project/sift/views.py:525
+#: project/sift/views.py:519
 msgid "interior_or_exterior_NA"
 msgstr "ei sise- ega välisvaade"
 
-#: project/sift/views.py:526
+#: project/sift/views.py:520
 msgid "view_or_social_NA"
 msgstr "ei vaade ega inimesed"
 
-#: project/sift/views.py:527
+#: project/sift/views.py:521
 msgid "ground_or_raised_NA"
 msgstr "ei maapinnalt ega kõrgemalt"
 
-#: project/sift/views.py:528
+#: project/sift/views.py:522
 msgid "urban_or_rural_NA"
 msgstr "ei maa ega linn"
 
-#: project/sift/views.py:529
+#: project/sift/views.py:523
 msgid "one_or_many_NA"
 msgstr "ei üks ega mitu inimest"
 
-#: project/sift/views.py:530
+#: project/sift/views.py:524
 msgid "public_or_private_NA"
 msgstr "ei avalik ega era"
 
-#: project/sift/views.py:531
+#: project/sift/views.py:525
 msgid "whole_or_detail_NA"
 msgstr "ei üld- ega lähivaade"
 
-#: project/sift/views.py:532
+#: project/sift/views.py:526
 msgid "staged_or_natural_NA"
 msgstr "ei poseeritud ega loomulik"
 
-#: project/sift/views.py:533
+#: project/sift/views.py:527
 msgid "manmade_or_nature_NA"
 msgstr "ei ehitatud ega looduslik"
 
-#: project/sift/views.py:984
+#: project/sift/views.py:978
 msgid "OK"
 msgstr "OK"
 
-#: project/sift/views.py:994
+#: project/sift/views.py:988
 msgid "Error uploading file"
 msgstr "Faili üleslaadimine ebaõnnestus"
 
-#: project/sift/views.py:1000
+#: project/sift/views.py:994
 msgid "Photo already exists in Sift"
 msgstr "Pilt on juba Sift'is"
 
-#: project/sift/views.py:1005
+#: project/sift/views.py:999
 msgid "Please add photos to your album"
 msgstr "Palun lisa oma albumisse fotosid"
 
-#: project/sift/views.py:1007
+#: project/sift/views.py:1001
 msgid "Not enough data submitted"
 msgstr "Osa vajalikke välju täitmata"
