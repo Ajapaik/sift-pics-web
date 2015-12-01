@@ -1,21 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 msgid ""
 msgstr ""
 "Project-Id-Version: Ajapaik\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-12-01 15:37+0200\n"
-"PO-Revision-Date: 2015-10-16 10:28+0000\n"
+"PO-Revision-Date: 2015-12-01 13:39+0000\n"
 "Last-Translator: Lauri Elias\n"
-"Language-Team: Finnish (http://www.transifex.com/estonian-photographic-"
-"heritage-society/ajapaik/language/fi/)\n"
-"Language: fi\n"
+"Language-Team: Finnish (http://www.transifex.com/estonian-photographic-heritage-society/ajapaik/language/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: fi\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: project/sift/settings/default.py:60
@@ -24,11 +23,11 @@ msgstr "Estonian"
 
 #: project/sift/settings/default.py:61
 msgid "English"
-msgstr ""
+msgstr "Englanti"
 
 #: project/sift/settings/default.py:62
 msgid "Finnish"
-msgstr ""
+msgstr "Suomi"
 
 #: project/sift/settings/default.py:63
 msgid "Swedish"
@@ -88,7 +87,7 @@ msgstr ""
 #: project/sift/templates/cat_results.html:76
 #: project/sift/templates/cat_tagger.html:98
 msgid "Sift.pics"
-msgstr ""
+msgstr "Sift.pics"
 
 #: project/sift/templates/_cat_header.html:17
 #: project/sift/templates/_cat_header.html:33
@@ -177,28 +176,20 @@ msgstr ""
 
 #: project/sift/templates/cat_about.html:23
 msgid ""
-"Historic photographs in public collections very often lack <b>basic "
-"classificatory tags</b> &#8211;\n"
-"            whether a picture is an <b>interior or exterior view</b>, has "
-"the picture been taken from\n"
-"            <b>ground level or from a raised viewpoint</b> (a higher floor "
-"window or tower), is it a view photograph\n"
-"            depicting mainly a <b>place</b> or a reportage photo about an "
-"<b>event</b> etc. Most of these decisions\n"
-"            are easy to make for everyone only by looking at a picture, so "
-"it is useful to capture that information\n"
+"Historic photographs in public collections very often lack <b>basic classificatory tags</b> &#8211;\n"
+"            whether a picture is an <b>interior or exterior view</b>, has the picture been taken from\n"
+"            <b>ground level or from a raised viewpoint</b> (a higher floor window or tower), is it a view photograph\n"
+"            depicting mainly a <b>place</b> or a reportage photo about an <b>event</b> etc. Most of these decisions\n"
+"            are easy to make for everyone only by looking at a picture, so it is useful to capture that information\n"
 "            that would enable <b>bulk filtering of images</b> afterwards."
 msgstr ""
 
 #: project/sift/templates/cat_about.html:29
 msgid ""
 "<b>Sift.pics</b> is a participatory <b>crowdsourcing application</b>\n"
-"            for that kind of binary categorisation about images. We take in "
-"pictures from\n"
-"            public collections that users start to browse and ask them to "
-"make couple of\n"
-"            sorting decisions, they can favorite (bookmark) images, see the "
-"title of the\n"
+"            for that kind of binary categorisation about images. We take in pictures from\n"
+"            public collections that users start to browse and ask them to make couple of\n"
+"            sorting decisions, they can favorite (bookmark) images, see the title of the\n"
 "            image and open the image in an official web repository."
 msgstr ""
 
@@ -408,35 +399,35 @@ msgstr ""
 
 #: project/sift/views.py:481
 msgid "Interior"
-msgstr ""
+msgstr "Sisäkuva"
 
 #: project/sift/views.py:482
 msgid "Exterior"
-msgstr ""
+msgstr "Ulkokuva"
 
 #: project/sift/views.py:483
 msgid "View"
-msgstr ""
+msgstr "Katso"
 
 #: project/sift/views.py:484
 msgid "Social"
-msgstr ""
+msgstr "Sosiaalinen"
 
 #: project/sift/views.py:485
 msgid "Ground"
-msgstr ""
+msgstr "Maan tasalta"
 
 #: project/sift/views.py:486
 msgid "Raised"
-msgstr ""
+msgstr "Ylhäältä"
 
 #: project/sift/views.py:487
 msgid "Rural"
-msgstr ""
+msgstr "Maaseutu"
 
 #: project/sift/views.py:488
 msgid "Urban"
-msgstr ""
+msgstr "Kaupunki"
 
 #: project/sift/views.py:489
 msgid "One"
@@ -448,27 +439,27 @@ msgstr ""
 
 #: project/sift/views.py:491
 msgid "Public"
-msgstr ""
+msgstr "Public"
 
 #: project/sift/views.py:492
 msgid "Private"
-msgstr ""
+msgstr "Private"
 
 #: project/sift/views.py:493
 msgid "Whole"
-msgstr ""
+msgstr "Yleinen"
 
 #: project/sift/views.py:494
 msgid "Detail"
-msgstr ""
+msgstr "Lähikuva"
 
 #: project/sift/views.py:495
 msgid "Staged"
-msgstr ""
+msgstr "Lavastettu"
 
 #: project/sift/views.py:496
 msgid "Natural"
-msgstr ""
+msgstr "Dokumentaarinen"
 
 #: project/sift/views.py:497
 msgid "Manmade"
@@ -503,6 +494,7 @@ msgid "raised"
 msgstr ""
 
 #: project/sift/views.py:506
+#| msgid "Rural"
 msgid "rural"
 msgstr ""
 
@@ -511,6 +503,7 @@ msgid "urban"
 msgstr ""
 
 #: project/sift/views.py:508
+#| msgid "One"
 msgid "one"
 msgstr ""
 
@@ -527,10 +520,12 @@ msgid "private"
 msgstr ""
 
 #: project/sift/views.py:512
+#| msgid "Whole"
 msgid "whole"
 msgstr ""
 
 #: project/sift/views.py:513
+#| msgid "Detail"
 msgid "detail"
 msgstr ""
 
@@ -539,10 +534,12 @@ msgid "staged"
 msgstr ""
 
 #: project/sift/views.py:515
+#| msgid "Rural"
 msgid "natural"
 msgstr ""
 
 #: project/sift/views.py:516
+#| msgid "Manmade"
 msgid "manmade"
 msgstr ""
 

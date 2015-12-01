@@ -38,7 +38,7 @@ msgstr ""
 
 #: project/sift/static/js/cat-extra-js-translations.js:6
 msgid "Exterior"
-msgstr ""
+msgstr "Exteriör"
 
 #: project/sift/static/js/cat-extra-js-translations.js:7
 msgid "Urban"

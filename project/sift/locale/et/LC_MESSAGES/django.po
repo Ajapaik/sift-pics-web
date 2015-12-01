@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Lauri Elias, 2015
 # Lauri Elias, 2015
@@ -11,14 +11,13 @@ msgstr ""
 "Project-Id-Version: Ajapaik\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-12-01 15:37+0200\n"
-"PO-Revision-Date: 2015-10-16 10:28+0000\n"
+"PO-Revision-Date: 2015-12-01 13:39+0000\n"
 "Last-Translator: Lauri Elias\n"
-"Language-Team: Estonian (http://www.transifex.com/estonian-photographic-"
-"heritage-society/ajapaik/language/et/)\n"
-"Language: et\n"
+"Language-Team: Estonian (http://www.transifex.com/estonian-photographic-heritage-society/ajapaik/language/et/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: et\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: project/sift/settings/default.py:60
@@ -180,41 +179,22 @@ msgstr "Sift.pics Twitteris"
 
 #: project/sift/templates/cat_about.html:23
 msgid ""
-"Historic photographs in public collections very often lack <b>basic "
-"classificatory tags</b> &#8211;\n"
-"            whether a picture is an <b>interior or exterior view</b>, has "
-"the picture been taken from\n"
-"            <b>ground level or from a raised viewpoint</b> (a higher floor "
-"window or tower), is it a view photograph\n"
-"            depicting mainly a <b>place</b> or a reportage photo about an "
-"<b>event</b> etc. Most of these decisions\n"
-"            are easy to make for everyone only by looking at a picture, so "
-"it is useful to capture that information\n"
+"Historic photographs in public collections very often lack <b>basic classificatory tags</b> &#8211;\n"
+"            whether a picture is an <b>interior or exterior view</b>, has the picture been taken from\n"
+"            <b>ground level or from a raised viewpoint</b> (a higher floor window or tower), is it a view photograph\n"
+"            depicting mainly a <b>place</b> or a reportage photo about an <b>event</b> etc. Most of these decisions\n"
+"            are easy to make for everyone only by looking at a picture, so it is useful to capture that information\n"
 "            that would enable <b>bulk filtering of images</b> afterwards."
-msgstr ""
-"Väga tihti ei ole muuseumide-arhiivide fotokogude piltidel küljes lihtsaid "
-"<b>kategoriseerivaid märksõnu</b>: kas tegemist on <b>sise- või "
-"välisvaatega</b>, kas pildistatud on <b>maapinnalt või mõnest kõrgemast "
-"punktist</b> (nt tornist, kõrgema korruse aknast), kas tegemist on pigem "
-"mingit kohta kujutava <b>vaatega</b> või ennekõike inimesi kujutava "
-"<b>sündmusliku ülesvõttega</b>. Selliseid määratlusi oskab üldiselt teha "
-"igaüks lihtsalt pildile vaadates ning kui see info oleks piltide küljes, "
-"saaksime pilte nende tunnuste järgi sorteerida-filtreerida."
+msgstr "Väga tihti ei ole muuseumide-arhiivide fotokogude piltidel küljes lihtsaid <b>kategoriseerivaid märksõnu</b>: kas tegemist on <b>sise- või välisvaatega</b>, kas pildistatud on <b>maapinnalt või mõnest kõrgemast punktist</b> (nt tornist, kõrgema korruse aknast), kas tegemist on pigem mingit kohta kujutava <b>vaatega</b> või ennekõike inimesi kujutava <b>sündmusliku ülesvõttega</b>. Selliseid määratlusi oskab üldiselt teha igaüks lihtsalt pildile vaadates ning kui see info oleks piltide küljes, saaksime pilte nende tunnuste järgi sorteerida-filtreerida."
 
 #: project/sift/templates/cat_about.html:29
 msgid ""
 "<b>Sift.pics</b> is a participatory <b>crowdsourcing application</b>\n"
-"            for that kind of binary categorisation about images. We take in "
-"pictures from\n"
-"            public collections that users start to browse and ask them to "
-"make couple of\n"
-"            sorting decisions, they can favorite (bookmark) images, see the "
-"title of the\n"
+"            for that kind of binary categorisation about images. We take in pictures from\n"
+"            public collections that users start to browse and ask them to make couple of\n"
+"            sorting decisions, they can favorite (bookmark) images, see the title of the\n"
 "            image and open the image in an official web repository."
-msgstr ""
-"Sift.pics on rahvahankeline rakendus piltide kategoriseerimiseks. Pildid "
-"pärinevad avalikest kollektsioonidest ja me palume kasutajatel teha iga "
-"pildi juures 2 kategoriseerivat otsust (kokku on kategoriseeringupaare 7)."
+msgstr "Sift.pics on rahvahankeline rakendus piltide kategoriseerimiseks. Pildid pärinevad avalikest kollektsioonidest ja me palume kasutajatel teha iga pildi juures 2 kategoriseerivat otsust (kokku on kategoriseeringupaare 7)."
 
 #: project/sift/templates/cat_about.html:35
 msgid "Team"
@@ -238,9 +218,7 @@ msgstr "android rakenduse arendus: Janek Priimann"
 
 #: project/sift/templates/cat_about.html:40
 msgid "Sift.pics has received a grant from the Estonian Ministry of Culture"
-msgstr ""
-"Sift.picsi arendust on toetanud Eesti Vabariigi Kultuuriministeerium 2015. a "
-"digitaalse kultuuripärandi taotlusvoorust"
+msgstr "Sift.picsi arendust on toetanud Eesti Vabariigi Kultuuriministeerium 2015. a digitaalse kultuuripärandi taotlusvoorust"
 
 #: project/sift/templates/cat_about.html:41
 #: project/sift/templates/cat_about.html:42
@@ -263,9 +241,7 @@ msgstr "tagasiside"
 msgid ""
 "This website uses cookies to ensure you get the best experience on our "
 "website"
-msgstr ""
-"Sift.pics veebileht kasutab küpsiseid. Lehte kasutades peate sellega "
-"leppima ;)"
+msgstr "Sift.pics veebileht kasutab küpsiseid. Lehte kasutades peate sellega leppima ;)"
 
 #: project/sift/templates/cat_base.html:127
 msgid "Got it!"
@@ -521,6 +497,7 @@ msgid "raised"
 msgstr "kõrgemalt"
 
 #: project/sift/views.py:506
+#| msgid "Rural"
 msgid "rural"
 msgstr "maa"
 
@@ -529,6 +506,7 @@ msgid "urban"
 msgstr "linn"
 
 #: project/sift/views.py:508
+#| msgid "One"
 msgid "one"
 msgstr "üks inimene"
 
@@ -545,10 +523,12 @@ msgid "private"
 msgstr "era"
 
 #: project/sift/views.py:512
+#| msgid "Whole"
 msgid "whole"
 msgstr "üldvaade"
 
 #: project/sift/views.py:513
+#| msgid "Detail"
 msgid "detail"
 msgstr "lähivaade"
 
@@ -557,10 +537,12 @@ msgid "staged"
 msgstr "poseeritud"
 
 #: project/sift/views.py:515
+#| msgid "Rural"
 msgid "natural"
 msgstr "loomulik"
 
 #: project/sift/views.py:516
+#| msgid "Manmade"
 msgid "manmade"
 msgstr "ehitatud"
 

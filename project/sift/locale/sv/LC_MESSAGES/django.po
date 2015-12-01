@@ -32,7 +32,7 @@ msgstr ""
 
 #: project/sift/settings/default.py:63
 msgid "Swedish"
-msgstr ""
+msgstr "Svenska"
 
 #: project/sift/templates/404.html:5 project/sift/templates/404.html.py:11
 msgid "Page Not Found"
