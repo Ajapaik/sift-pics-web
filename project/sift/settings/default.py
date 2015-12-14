@@ -84,6 +84,7 @@ STATICFILES_FINDERS = (
 SECRET_KEY = '!!! paste your own secret key here !!!'
 
 TEMPLATE_LOADERS = (
+    'admin_tools.template_loaders.Loader',
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
     'django.template.loaders.eggs.Loader',
