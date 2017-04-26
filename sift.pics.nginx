@@ -1,0 +1,72 @@
+# Expires map
+map $sent_http_content_type $expires {
+    default                    off;
+    text/html                  epoch;
+    text/css                   max;
+    application/javascript     max;
+    ~image/                    max;
+}
+
+server {
+    listen 80;
+
+    server_name sift.pics;
+
+    return 301 https://sift.pics$request_uri;
+}
+
+server {
+    listen 80;
+
+    server_name www.sift.pics;
+
+    return 301 https://sift.pics$request_uri;
+}
+
+server {
+    listen 443;
+
+    server_name www.sift.pics;
+
+    ssl on;
+    ssl_certificate /etc/letsencrypt/live/sift.pics/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/sift.pics/privkey.pem;
+
+    return 301 https://sift.pics$request_uri;
+}
+
+server {
+    listen 443;
+
+    server_name sift.pics;
+
+    ssl on;
+    ssl_certificate /etc/letsencrypt/live/sift.pics/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/sift.pics/privkey.pem;
+
+    access_log /var/log/sift.pics.access.log;
+    error_log /var/log/sift.pics.error.log;
+
+    expires $expires;
+
+    if ($host !~* ^(sift.pics|www.sift.pics)$ ) {
+        return 444;
+    }
+
+    location /media  {
+        alias /home/ajapaik/sift-pics-web/media;
+    }
+
+    location /static {
+        alias /home/ajapaik/sift-pics-web/static-collected;
+    }
+
+    location ~ ^/favicon.(\w*)$ {
+        alias /home/ajapaik/sift-pics-web/static-collected/favicon.$1;
+    }
+
+    location / {
+        include uwsgi_params;
+        uwsgi_pass unix:/home/ajapaik/sift-pics-web/run/sift.pics.sock;
+    }
+}
