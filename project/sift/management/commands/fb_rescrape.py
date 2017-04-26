@@ -8,8 +8,8 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         photos = CatPhoto.objects.all()
-        query_string = 'http://graph.facebook.com/?id=%s&scrape=true'
-        url_template = 'http://sift.pics/photo/%d/'
+        query_string = 'https://graph.facebook.com/?id=%s&scrape=true'
+        url_template = 'https://sift.pics/photo/%d/'
         for p in photos:
             print p.id
             url = url_template % p.id

@@ -57,9 +57,9 @@
             $('#cat-tagger-current-photo').attr('src', this.currentPhoto.image.replace('[DIM]', '800'))
                 .attr('alt', this.currentPhoto.title).attr('title', this.currentPhoto.title);
             var shareURL = permalinkBlankURL + this.currentPhoto.id + '/';
-            $('.fb-like').attr('data-href', 'http://' + baseURL + shareURL).attr('data-cat-id', this.currentPhoto.id);
+            $('.fb-like').attr('data-href', 'https://' + baseURL + shareURL).attr('data-cat-id', this.currentPhoto.id);
             FB.XFBML.parse();
-            $('#cat-tagger-share-link').html('<a traget="_blank" href="http://' + baseURL + shareURL + '">http://' + baseURL + shareURL + '</a>');
+            $('#cat-tagger-share-link').html('<a target="_blank" href="https://' + baseURL + shareURL + '">https://' + baseURL + shareURL + '</a>');
             $('#cat-tagger-current-photo-link').attr('href', shareURL + this.currentPhoto.slug)
                 .attr('data-id', this.currentPhoto.id).attr('title', this.currentPhoto.title);
             $('#cat-tagger-favorite-button').attr('data-id', this.currentPhoto.id);

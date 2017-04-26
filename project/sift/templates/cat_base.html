@@ -35,7 +35,7 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="msvalidate.01" content="0AFAD3D32395E8F3F75621502B39878C" />
     <meta property="fb:app_id" content="489848077850414" />
-    <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="{% static "css/cookieconsent.min.css" %}"/>
     {% compress css %}
         <link rel="stylesheet" href="{% static "libs/bootstrap-3.3.5/css/bootstrap.css" %}">
@@ -44,7 +44,7 @@
     {% endcompress %}
     {% if fb_share_photos %}
         {% for p in fb_share_photos %}
-            <meta property="og:image" content="http://{{ request.get_host }}/{% url "project.sift.views.cat_photo" p.0 2048 p.1 %}"/>
+            <meta property="og:image" content="https://{{ request.get_host }}/{% url "project.sift.views.cat_photo" p.0 2048 p.1 %}"/>
             <meta property="og:image:width" content="{{ p.2 }}" />
             <meta property="og:image:height" content="{{ p.3 }}" />
         {% endfor %}
