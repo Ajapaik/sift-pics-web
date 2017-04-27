@@ -203,5 +203,6 @@ AJAPAIK_VALIMIMOODUL_URL = 'http://ajapaik.ee:8080/ajapaik-service/AjapaikServic
 
 ALLOWED_HOSTS = ['.sift.pics', '.ajapaik.ee']
 
-COMPRESS_CSS_FILTERS = ['compressor.filters.cssmin.rCSSMinFilter']
-COMPRESS_JS_FILTERS = ['compressor.filters.jsmin.JSMinFilter']
+# These break static images
+# COMPRESS_CSS_FILTERS = ['compressor.filters.cssmin.rCSSMinFilter']
+# COMPRESS_JS_FILTERS = ['compressor.filters.jsmin.JSMinFilter']
