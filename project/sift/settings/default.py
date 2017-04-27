@@ -202,3 +202,6 @@ FACEBOOK_APP_KEY = ''
 AJAPAIK_VALIMIMOODUL_URL = 'http://ajapaik.ee:8080/ajapaik-service/AjapaikService.json'
 
 ALLOWED_HOSTS = ['.sift.pics', '.ajapaik.ee']
+
+COMPRESS_CSS_FILTERS = ['compressor.filters.cssmin.rCSSMinFilter']
+COMPRESS_JS_FILTERS = ['compressor.filters.jsmin.JSMinFilter']

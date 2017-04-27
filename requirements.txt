@@ -13,5 +13,5 @@ django-mobi==0.1.7
 python-memcached==1.58
 pysolr==3.6.0
 ujson==1.35
-pytz==2016.10
+pytz==2017.2
 uWSGI=2.0.15
