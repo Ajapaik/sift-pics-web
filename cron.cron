@@ -1,2 +1,2 @@
-45 5 * * * cd /home/ajapaik/sift-pics-web && /venv/bin/python project/manage.py update_index
-0 * * * * cd /home/ajapaik/sift-pics-web && /venv/bin/python project/manage.py set_applied_tags_for_cat_photos
+45 5 * * * cd /home/ajapaik/sift-pics-web && venv/bin/python project/manage.py update_index
+0 * * * * cd /home/ajapaik/sift-pics-web && venv/bin/python project/manage.py set_applied_tags_for_cat_photos
