@@ -692,9 +692,9 @@ def cat_tagger(request):
 @authentication_classes((CustomAuthentication,))
 @permission_classes((IsAuthenticated,))
 def cat_register_push(request):
-    request.POST._mutable = True
     cat_push_register_form = CatPushRegisterForm(request.data)
     profile = request.get_user().catprofile
+    cat_push_register_form.data._mutable = True
     cat_push_register_form.data["profile"] = profile
     content = {
         'error': 4
@@ -727,6 +727,7 @@ def cat_deregister_push(request):
     content = {
         'error': 0
     }
+    cat_push_register_form.data._mutable = True
     cat_push_register_form.data["profile"] = profile
     if cat_push_register_form.is_valid():
         try:
