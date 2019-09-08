@@ -18,6 +18,9 @@
     /*global tmpl */
     /*global originalWindowTitle */
     /*global FB*/
+    if ('ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0) {
+        $(".cat-btn-group > .btn-group > .btn").css("background-color","black");
+    }
     window.CatTagger = function () {
         this.selectedAlbumId = null;
         this.selectedAlbumTitle = null;
