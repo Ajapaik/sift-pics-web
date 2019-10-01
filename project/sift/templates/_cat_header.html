@@ -47,20 +47,6 @@
                         <i class="material-icons">local_offer</i>
                     </a>
                 </li>
-                <li class="pull-left cat-header-filter hidden-xs">
-                    <a href="#" title="{% trans "Filter by tags" %}" class="cat-header-link cat-no-background cat-header-filter-link">
-                        <i class="material-icons">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24">
-                                <path fill="{% if is_filter %}white{% else %}#888{% endif %}" d="M3,2H21V2H21V4H20.92L14,10.92V22.91L10,18.91V10.91L3.09,4H3V2Z" ></path>
-                            </svg>
-                        </i>
-                    </a>
-                </li>
-                <li class="pull-left cat-header-connect hidden-xs">
-                    <a href="{% url 'project.sift.views.cat_connect' 0 0 0 0 %}" title="{% trans "Make connections" %}" class="cat-header-link cat-no-background cat-header-connect-link{% if is_connect %} cat-text-white{% else %} cat-text-gray{% endif %}">
-                        <i class="material-icons">link</i>
-                    </a>
-                </li>
                 {% if user_can_curate %}
                     <li class="pull-left cat-header-curator hidden-xs">
                         <a href="#" title="{% trans "Curate photos" %}" class="cat-header-link cat-no-background cat-header-curator-link{% if is_curator %} cat-text-white{% else %} cat-text-gray{% endif %}">
@@ -83,15 +69,6 @@
                 <li class="pull-left cat-header-tag visible-xs">
                     <a href="#" title="{% trans "Tag photos" %}" class="cat-header-link cat-no-background cat-header-tag-link{% if is_tag %} cat-text-white{% else %} cat-text-gray{% endif %}">
                         <i class="material-icons">local_offer</i>
-                    </a>
-                </li>
-                <li class="pull-left cat-header-filter visible-xs">
-                    <a href="#" title="{% trans "Filter by tags" %}" class="cat-header-link cat-no-background cat-header-filter-link">
-                        <i class="material-icons">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24">
-                                <path fill="{% if is_filter %}white{% else %}#888{% endif %}" d="M3,2H21V2H21V4H20.92L14,10.92V22.91L10,18.91V10.91L3.09,4H3V2Z" ></path>
-                            </svg>
-                        </i>
                     </a>
                 </li>
                 {% if user_can_curate %}
