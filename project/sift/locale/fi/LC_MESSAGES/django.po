@@ -19,7 +19,7 @@ msgstr ""
 
 #: project/sift/settings/default.py:60
 msgid "Estonian"
-msgstr "Estonian"
+msgstr "Eesti"
 
 #: project/sift/settings/default.py:61
 msgid "English"
@@ -31,39 +31,39 @@ msgstr "Suomi"
 
 #: project/sift/settings/default.py:63
 msgid "Swedish"
-msgstr ""
+msgstr "Ruotsi"
 
 #: project/sift/templates/404.html:5 project/sift/templates/404.html.py:11
 msgid "Page Not Found"
-msgstr ""
+msgstr "Sivua ei löydy"
 
 #: project/sift/templates/404.html:14
 msgid "Back"
-msgstr ""
+msgstr "Takaisin"
 
 #: project/sift/templates/_cat_album_creation_modal.html:10
 msgid "Collection info"
-msgstr ""
+msgstr "Kokoelman tiedot"
 
 #: project/sift/templates/_cat_album_creation_modal.html:17
 msgid "System error"
-msgstr ""
+msgstr "Järjestelmävirhe"
 
 #: project/sift/templates/_cat_album_creation_modal.html:23
 msgid "Filter selection"
-msgstr ""
+msgstr "Valitse suodatin"
 
 #: project/sift/templates/_cat_album_creation_modal.html:25
 msgid "Choose an existing album"
-msgstr ""
+msgstr "Valitse olemassaoleva albumi"
 
 #: project/sift/templates/_cat_album_creation_modal.html:32
 msgid "Or create a new one"
-msgstr ""
+msgstr "Tai luo uusi"
 
 #: project/sift/templates/_cat_album_creation_modal.html:40
 msgid "New album name"
-msgstr ""
+msgstr "Uuden albumin nimi"
 
 #: project/sift/templates/_cat_album_creation_modal.html:50
 msgid "New album description"
@@ -467,85 +467,85 @@ msgstr "Man-made"
 
 #: project/sift/views.py:498
 msgid "Nature"
-msgstr ""
+msgstr "luonto"
 
 #: project/sift/views.py:500
 msgid "interior"
-msgstr ""
+msgstr "sisäkuva"
 
 #: project/sift/views.py:501
 msgid "exterior"
-msgstr ""
+msgstr "ulkokuva"
 
 #: project/sift/views.py:502
 msgid "view"
-msgstr ""
+msgstr "katso"
 
 #: project/sift/views.py:503
 msgid "social"
-msgstr ""
+msgstr "sosiaalinen"
 
 #: project/sift/views.py:504
 msgid "ground"
-msgstr ""
+msgstr "maan tasalta"
 
 #: project/sift/views.py:505
 msgid "raised"
-msgstr ""
+msgstr "ylhäältä"
 
 #: project/sift/views.py:506
 #| msgid "Rural"
 msgid "rural"
-msgstr ""
+msgstr "rural"
 
 #: project/sift/views.py:507
 msgid "urban"
-msgstr ""
+msgstr "urban"
 
 #: project/sift/views.py:508
 #| msgid "One"
 msgid "one"
-msgstr ""
+msgstr "yksi"
 
 #: project/sift/views.py:509
 msgid "many"
-msgstr ""
+msgstr "useita"
 
 #: project/sift/views.py:510
 msgid "public"
-msgstr ""
+msgstr "julkinen"
 
 #: project/sift/views.py:511
 msgid "private"
-msgstr ""
+msgstr "yksityinen"
 
 #: project/sift/views.py:512
 #| msgid "Whole"
 msgid "whole"
-msgstr ""
+msgstr "ylelinen"
 
 #: project/sift/views.py:513
 #| msgid "Detail"
 msgid "detail"
-msgstr ""
+msgstr "lähikuva"
 
 #: project/sift/views.py:514
 msgid "staged"
-msgstr ""
+msgstr ""lavastettu
 
 #: project/sift/views.py:515
 #| msgid "Rural"
 msgid "natural"
-msgstr ""
+msgstr "dokumentaarinen"
 
 #: project/sift/views.py:516
 #| msgid "Manmade"
 msgid "manmade"
-msgstr ""
+msgstr "keinotekoinen"
 
 #: project/sift/views.py:517
 msgid "nature"
-msgstr ""
+msgstr "Luonto"
 
 #: project/sift/views.py:519
 msgid "interior_or_exterior_NA"
@@ -589,16 +589,16 @@ msgstr ""
 
 #: project/sift/views.py:988
 msgid "Error uploading file"
-msgstr ""
+msgstr "Virhe kuvan lähetyksessä"
 
 #: project/sift/views.py:994
 msgid "Photo already exists in Sift"
-msgstr ""
+msgstr "Kuva on jo Sift.picsssä"
 
 #: project/sift/views.py:999
 msgid "Please add photos to your album"
-msgstr ""
+msgstr "Lisää kuvia albumiisi"
 
 #: project/sift/views.py:1001
 msgid "Not enough data submitted"
-msgstr ""
+msgstr "Ei riittävänä dataa lähetettävänä"

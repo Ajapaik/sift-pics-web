@@ -20,105 +20,109 @@ msgstr ""
 
 #: project/sift/static/js/cat-curator.js:68
 msgid "Not selected"
-msgstr ""
+msgstr "Ei valittuna"
 
 #: project/sift/static/js/cat-curator.js:382
 msgid ""
 "Are you sure you want to create an album with less than 5 photos? We "
 "recommend to create albums with at least 10 or more pictures."
 msgstr ""
+"Oletko varma, että haluat tehdä albumin jossa on vähemmän kuin 5 kuvaa?"
+"Suosittelemme luomaan vain albumeja joissa on 10 kuvaa tai enemmän"
 
 #: project/sift/static/js/cat-curator.js:406
 msgid "System error"
-msgstr ""
+msgstr "Järjestelmävirhe"
 
 #: project/sift/static/js/cat-extra-js-translations.js:5
 msgid "Interior"
-msgstr "Sisustus"
+msgstr "Sisäkuva"
 
 #: project/sift/static/js/cat-extra-js-translations.js:6
 msgid "Exterior"
-msgstr ""
+msgstr "Ulkokuva"
 
 #: project/sift/static/js/cat-extra-js-translations.js:7
 msgid "Urban"
-msgstr ""
+msgstr "Kaupunkimainen"
 
 #: project/sift/static/js/cat-extra-js-translations.js:8
 msgid "Rural"
-msgstr ""
+msgstr "Maalaismainen"
 
 #: project/sift/static/js/cat-extra-js-translations.js:9
 msgid "Manmade"
-msgstr ""
+msgstr "Keinotekoinen"
 
 #: project/sift/static/js/cat-extra-js-translations.js:10
 msgid "Nature"
-msgstr ""
+msgstr "Luonto"
 
 #: project/sift/static/js/cat-extra-js-translations.js:11
 msgid "Ground"
-msgstr ""
+msgstr "Maan tasalta"
 
 #: project/sift/static/js/cat-extra-js-translations.js:12
 msgid "Raised"
-msgstr ""
+msgstr "Ylhäältä"
 
 #: project/sift/static/js/cat-extra-js-translations.js:13
 msgid "One"
-msgstr ""
+msgstr "Yksi henkilö"
 
 #: project/sift/static/js/cat-extra-js-translations.js:14
 msgid "Many"
-msgstr ""
+msgstr "Useita henkilöitä"
 
 #: project/sift/static/js/cat-extra-js-translations.js:15
 msgid "Whole"
-msgstr ""
+msgstr "Yleinen"
 
 #: project/sift/static/js/cat-extra-js-translations.js:16
 msgid "Detail"
-msgstr ""
+msgstr "Lähikuva"
 
 #: project/sift/static/js/cat-extra-js-translations.js:17
 msgid "Staged"
-msgstr ""
+msgstr "Lavastettu"
 
 #: project/sift/static/js/cat-extra-js-translations.js:18
 msgid "Natural"
-msgstr ""
+msgstr "Luonto"
 
 #: project/sift/static/js/cat-extra-js-translations.js:19
 msgid "Public"
-msgstr ""
+msgstr "Julkinen"
 
 #: project/sift/static/js/cat-extra-js-translations.js:20
 msgid "Private"
-msgstr ""
+msgstr "Yksityinen"
 
 #: project/sift/static/js/cat-extra-js-translations.js:21
 msgid "View"
-msgstr ""
+msgstr "Katso"
 
 #: project/sift/static/js/cat-extra-js-translations.js:22
 msgid "Social"
-msgstr ""
+msgstr "Sosiaalinen"
 
 #: project/sift/static/js/cat-extra-js-translations.js:23
 msgid "%(pictures)s pictures in album"
-msgstr ""
+msgstr "%(pictures) kuvaa albumissa"
 
 #: project/sift/static/js/cat-extra-js-translations.js:24
 msgid ""
 "You have made %(decisions)s decisions about %(pictures)s pictures in this "
 "album."
 msgstr ""
+"Teit %(decisions) määrittelyä %(pictures) kuvalle tässä "
+"albumissa."
 
 #: project/sift/static/js/cat-extra-js-translations.js:25
 #: project/sift/static/js/cat-results.js:112
 #: project/sift/static/js/cat-tagger.js:136
 msgid "You are contributor number %(rank)s."
-msgstr ""
+msgstr "Olet osallistuja numero %(rank)."
 
 #: project/sift/static/js/cat-extra-js-translations.js:26
 #: project/sift/static/js/cat-results.js:111
@@ -127,3 +131,5 @@ msgid ""
 "%(users)s users have made %(decisions)s decisions about %(pictures)s "
 "pictures."
 msgstr ""
+"%(users) käyttäjää on tehnyt %(decisions) määrittelyä %(pictures) "
+"kuvalle."
