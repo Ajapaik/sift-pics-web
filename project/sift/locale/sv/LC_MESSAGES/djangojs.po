@@ -20,7 +20,7 @@ msgstr ""
 
 #: project/sift/static/js/cat-curator.js:68
 msgid "Not selected"
-msgstr ""
+msgstr "Ej valt"
 
 #: project/sift/static/js/cat-curator.js:382
 msgid ""
@@ -30,15 +30,15 @@ msgstr ""
 
 #: project/sift/static/js/cat-curator.js:406
 msgid "System error"
-msgstr ""
+msgstr "Systemfel"
 
 #: project/sift/static/js/cat-extra-js-translations.js:5
 msgid "Interior"
-msgstr ""
+msgstr "Inomhus"
 
 #: project/sift/static/js/cat-extra-js-translations.js:6
 msgid "Exterior"
-msgstr "Exteriör"
+msgstr "Utomhus"
 
 #: project/sift/static/js/cat-extra-js-translations.js:7
 msgid "Urban"
@@ -50,75 +50,77 @@ msgstr ""
 
 #: project/sift/static/js/cat-extra-js-translations.js:9
 msgid "Manmade"
-msgstr ""
+msgstr "Konstgjord"
 
 #: project/sift/static/js/cat-extra-js-translations.js:10
 msgid "Nature"
-msgstr ""
+msgstr "Natur"
 
 #: project/sift/static/js/cat-extra-js-translations.js:11
 msgid "Ground"
-msgstr ""
+msgstr "Från Mark Nivå"
 
 #: project/sift/static/js/cat-extra-js-translations.js:12
 msgid "Raised"
-msgstr ""
+msgstr "Från Upprest Nivå"
 
 #: project/sift/static/js/cat-extra-js-translations.js:13
 msgid "One"
-msgstr ""
+msgstr "En Person"
 
 #: project/sift/static/js/cat-extra-js-translations.js:14
 msgid "Many"
-msgstr ""
+msgstr "Många personer"
 
 #: project/sift/static/js/cat-extra-js-translations.js:15
 msgid "Whole"
-msgstr ""
+msgstr "Generell"
 
 #: project/sift/static/js/cat-extra-js-translations.js:16
 msgid "Detail"
-msgstr ""
+msgstr "Närbild"
 
 #: project/sift/static/js/cat-extra-js-translations.js:17
 msgid "Staged"
-msgstr ""
+msgstr "Iscensatt"
 
 #: project/sift/static/js/cat-extra-js-translations.js:18
 msgid "Natural"
-msgstr ""
+msgstr "Naturlig"
 
 #: project/sift/static/js/cat-extra-js-translations.js:19
 msgid "Public"
-msgstr ""
+msgstr "Offentlig"
 
 #: project/sift/static/js/cat-extra-js-translations.js:20
 msgid "Private"
-msgstr ""
+msgstr "Privat"
 
 #: project/sift/static/js/cat-extra-js-translations.js:21
 msgid "View"
-msgstr ""
+msgstr "Vy"
 
 #: project/sift/static/js/cat-extra-js-translations.js:22
 msgid "Social"
-msgstr ""
+msgstr "Social"
 
 #: project/sift/static/js/cat-extra-js-translations.js:23
 msgid "%(pictures)s pictures in album"
-msgstr ""
+msgstr "%(pictures) bilder i album"
 
 #: project/sift/static/js/cat-extra-js-translations.js:24
 msgid ""
 "You have made %(decisions)s decisions about %(pictures)s pictures in this "
 "album."
 msgstr ""
+"Du har gjort %(decisions) beslut om %(pictures) bilder i detta "
+"album."
 
 #: project/sift/static/js/cat-extra-js-translations.js:25
 #: project/sift/static/js/cat-results.js:112
 #: project/sift/static/js/cat-tagger.js:136
 msgid "You are contributor number %(rank)s."
-msgstr ""
+msgstr "Du är bidragsgivare nummer %(rank)."
 
 #: project/sift/static/js/cat-extra-js-translations.js:26
 #: project/sift/static/js/cat-results.js:111
@@ -127,3 +129,5 @@ msgid ""
 "%(users)s users have made %(decisions)s decisions about %(pictures)s "
 "pictures."
 msgstr ""
+"%(users) nvändare har gjort %(decisions) beslut om %(pictures) "
+"bilder."
