@@ -131,7 +131,7 @@
             };
         </script>
     {% endcompress %}
-    <script>
+    <!--script>
         window.fbAsyncInit = function () {
             FB.init({
                 appId: '489848077850414',
@@ -149,7 +149,7 @@
             js.src = "//connect.facebook.net/{% if request.LANGUAGE_CODE == 'et' %}et_EE{% elif request.LANGUAGE_CODE == 'fi'%}fi_FI{% else %}en_UK{% endif %}/sdk.js";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
-    </script>
+    </script-->
 {% endblock %}
 {% block specific_js %}{% endblock %}
 </body>
