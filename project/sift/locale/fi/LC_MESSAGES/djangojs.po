@@ -108,21 +108,21 @@ msgstr "Ihmisiä"
 
 #: project/sift/static/js/cat-extra-js-translations.js:23
 msgid "%(pictures)s pictures in album"
-msgstr "%(pictures) kuvaa albumissa"
+msgstr "%(pictures)s kuvaa albumissa"
 
 #: project/sift/static/js/cat-extra-js-translations.js:24
 msgid ""
 "You have made %(decisions)s decisions about %(pictures)s pictures in this "
 "album."
 msgstr ""
-"Teit %(decisions) määrittelyä %(pictures) kuvalle tässä "
+"Teit %(decisions)s määrittelyä %(pictures)s kuvalle tässä "
 "albumissa."
 
 #: project/sift/static/js/cat-extra-js-translations.js:25
 #: project/sift/static/js/cat-results.js:112
 #: project/sift/static/js/cat-tagger.js:136
 msgid "You are contributor number %(rank)s."
-msgstr "Olet osallistuja numero %(rank)."
+msgstr "Olet osallistuja numero %(rank)s."
 
 #: project/sift/static/js/cat-extra-js-translations.js:26
 #: project/sift/static/js/cat-results.js:111
@@ -131,5 +131,5 @@ msgid ""
 "%(users)s users have made %(decisions)s decisions about %(pictures)s "
 "pictures."
 msgstr ""
-"%(users) käyttäjää on tehnyt %(decisions) määrittelyä %(pictures) "
+"%(users)s käyttäjää on tehnyt %(decisions)s määrittelyä %(pictures)s "
 "kuvalle."

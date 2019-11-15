@@ -106,21 +106,21 @@ msgstr "Social"
 
 #: project/sift/static/js/cat-extra-js-translations.js:23
 msgid "%(pictures)s pictures in album"
-msgstr "%(pictures) bilder i album"
+msgstr "%(pictures)s bilder i album"
 
 #: project/sift/static/js/cat-extra-js-translations.js:24
 msgid ""
 "You have made %(decisions)s decisions about %(pictures)s pictures in this "
 "album."
 msgstr ""
-"Du har gjort %(decisions) beslut om %(pictures) bilder i detta "
+"Du har gjort %(decisions)s beslut om %(pictures)s bilder i detta "
 "album."
 
 #: project/sift/static/js/cat-extra-js-translations.js:25
 #: project/sift/static/js/cat-results.js:112
 #: project/sift/static/js/cat-tagger.js:136
 msgid "You are contributor number %(rank)s."
-msgstr "Du är bidragsgivare nummer %(rank)."
+msgstr "Du är bidragsgivare nummer %(rank)s."
 
 #: project/sift/static/js/cat-extra-js-translations.js:26
 #: project/sift/static/js/cat-results.js:111
@@ -129,5 +129,5 @@ msgid ""
 "%(users)s users have made %(decisions)s decisions about %(pictures)s "
 "pictures."
 msgstr ""
-"%(users) nvändare har gjort %(decisions) beslut om %(pictures) "
+"%(users)s nvändare har gjort %(decisions)s beslut om %(pictures)s "
 "bilder."
