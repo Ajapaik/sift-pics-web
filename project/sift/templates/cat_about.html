@@ -10,9 +10,6 @@
     <div class="container {% if not request.mobile %}cat-margin-top-125{% else %}cat-margin-top-50{% endif %}" id="cat-about-container">
         <br><br>
         <p>{% trans "Published on March 28, 2015" %}</p>
-        <br>
-        <p>{% trans "Second Prize" %} @ <a id="cat-hack-for-fi-link" title="{% trans "Hack4Fi Hack your heritage competition" %}" href="http://hack4.fi">
-            {% trans "Hack4Fi Hack your heritage competition" %}</a>, {% trans "March 26" %}</p>
         <p>{% blocktrans %}Historic photographs in public collections very often lack <b>basic classificatory tags</b> &#8211;
             whether a picture is an <b>interior or exterior view</b>, has the picture been taken from
             <b>ground level or from a raised viewpoint</b> (a higher floor window or tower), is it a view photograph
@@ -32,6 +29,8 @@
         <p>{% trans "Twitter" %}: <a id="cat-twitter-link" title="{% trans "Sift.pics on Twitter" %}" href="https://twitter.com/SiftPics">@SiftPics</a></p>
         <br>
         <p>{% trans "Sift.pics has received a grant from the Estonian Ministry of Culture" %}</p>
+        <p>{% trans "Second Prize" %} @ <a id="cat-hack-for-fi-link" title="{% trans "Hack4Fi Hack your heritage competition" %}" href="http://hack4.fi">
+            {% trans "Hack4Fi Hack your heritage competition" %}</a>, {% trans "March 26" %}</p>
         <a href="http://www.kul.ee" title="{% trans "Estonian Ministry of Culture" %}" target="_blank">
             <img id="cat-ministry-of-culture-logo" class="img-responsive" src="{% static "images/0_kultuurimin_3lovi_est_black.png" %}" alt="{% trans "Estonian Ministry of Culture" %}" title="{% trans "Estonian Ministry of Culture" %}">
         </a>

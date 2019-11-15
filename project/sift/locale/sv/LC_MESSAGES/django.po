@@ -147,25 +147,25 @@ msgstr "Välj språk"
 
 #: project/sift/templates/cat_about.html:12
 msgid "Published on March 28, 2015"
-msgstr ""
+msgstr "Published on March 28, 2015"
 
 #: project/sift/templates/cat_about.html:12
 #: project/sift/templates/cat_about.html:13
 msgid "Download from Play Store"
-msgstr ""
+msgstr "Download from Play Store"
 
 #: project/sift/templates/cat_about.html:19
 msgid "Second Prize"
-msgstr ""
+msgstr "Second Prize"
 
 #: project/sift/templates/cat_about.html:19
 #: project/sift/templates/cat_about.html:20
 msgid "Hack4Fi Hack your heritage competition"
-msgstr ""
+msgstr "Hack4Fi Hack your heritage competition"
 
 #: project/sift/templates/cat_about.html:20
 msgid "March 26"
-msgstr ""
+msgstr "March 26, 2015"
 
 #: project/sift/templates/cat_about.html:21
 msgid "Twitter"
@@ -173,7 +173,7 @@ msgstr ""
 
 #: project/sift/templates/cat_about.html:21
 msgid "Sift.pics on Twitter"
-msgstr "Sift.pics på Twitter"
+msgstr "Sift.pics on Twitter"
 
 #: project/sift/templates/cat_about.html:23
 msgid ""
@@ -212,6 +212,14 @@ msgid ""
 "title of the\n"
 "            image and open the image in an official web repository."
 msgstr ""
+"<b>Sift.pics</b> is a participatory <b>crowdsourcing application</b>\n"
+"            for that kind of binary categorisation about images. We take in "
+"pictures from\n"
+"            public collections that users start to browse and ask them to "
+"make couple of\n"
+"            sorting decisions, they can favorite (bookmark) images, see the "
+"title of the\n"
+"            image and open the image in an official web repository."
 
 #: project/sift/templates/cat_about.html:35
 msgid "Team"

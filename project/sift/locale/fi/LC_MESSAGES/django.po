@@ -146,25 +146,25 @@ msgstr "Valitse kieli"
 
 #: project/sift/templates/cat_about.html:12
 msgid "Published on March 28, 2015"
-msgstr "Julkaistu 28.3.2015"
+msgstr "Published on March 28, 2015"
 
 #: project/sift/templates/cat_about.html:12
 #: project/sift/templates/cat_about.html:13
 msgid "Download from Play Store"
-msgstr "Lataa Play Storesta"
+msgstr "Download from Play Store"
 
 #: project/sift/templates/cat_about.html:19
 msgid "Second Prize"
-msgstr "Toinen palkinto"
+msgstr "Second Prize"
 
 #: project/sift/templates/cat_about.html:19
 #: project/sift/templates/cat_about.html:20
 msgid "Hack4Fi Hack your heritage competition"
-msgstr "Hack4Fi Hack your heritage -kilpailussa"
+msgstr "Hack4Fi Hack your heritage competition"
 
 #: project/sift/templates/cat_about.html:20
 msgid "March 26"
-msgstr "Maaliskuu 26"
+msgstr "March 26, 2015"
 
 #: project/sift/templates/cat_about.html:21
 msgid "Twitter"
@@ -172,7 +172,7 @@ msgstr ""
 
 #: project/sift/templates/cat_about.html:21
 msgid "Sift.pics on Twitter"
-msgstr "Sift.pics Twitterissä"
+msgstr "Sift.pics on Twitter"
 
 #: project/sift/templates/cat_about.html:23
 msgid ""
