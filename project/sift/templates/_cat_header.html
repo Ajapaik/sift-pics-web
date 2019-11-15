@@ -92,11 +92,19 @@
                         </a>
                     </li>
                 {% endif %}
+                {% if not is_tabletview %}
                 <li class="pull-left{% if is_about %} active{% endif %}">
                     <a id="cat-about-link" title="{% trans 'About' %}" href="{% url "project.sift.views.cat_about" %}" class="cat-header-link cat-no-background{% if is_about %} cat-text-white{% else %} cat-text-gray{% endif %}">
                         <i class="material-icons">help</i>
                     </a>
                 </li>
+                {% else %}
+                <li class="pull-left{% if is_about %} active{% endif %}">
+                    <a id="cat-about-link" title="{% trans 'About' %}" href="{% url "project.sift.views.cat_about_tablet" %}" class="cat-header-link cat-no-background{% if is_about %} cat-text-white{% else %} cat-text-gray{% endif %}">
+                        <i class="material-icons">help</i>
+                    </a>
+                </li>
+                {% endif %}
                 <li class="dropdown pull-left">
                     {% get_language_info for LANGUAGE_CODE as lang %}
                     <a id="cat-choose-language" href="#" data-toggle="dropdown" class="dropdown-toggle cat-no-background cat-text-white"

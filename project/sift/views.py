@@ -656,7 +656,8 @@ def cat_about(request):
     return render_to_response('cat_about.html', RequestContext(request, {
         'title': _('About'),
         'is_about': True,
-        'user_can_curate': user_can_curate
+        'user_can_curate': user_can_curate,
+        'is_tabletview': request.path.find("about-tablet") > 0
     }))
 
 
