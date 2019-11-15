@@ -100,7 +100,7 @@
                 </li>
                 {% else %}
                 <li class="pull-left{% if is_about %} active{% endif %}">
-                    <a id="cat-about-link" title="{% trans 'About' %}" href="{% url "project.sift.views.cat_about_tablet" %}" class="cat-header-link cat-no-background{% if is_about %} cat-text-white{% else %} cat-text-gray{% endif %}">
+                    <a id="cat-about-link" title="{% trans 'About' %}" href="{% url "project.sift.views.cat_about" %}" class="cat-header-link cat-no-background{% if is_about %} cat-text-white{% else %} cat-text-gray{% endif %}">
                         <i class="material-icons">help</i>
                     </a>
                 </li>
