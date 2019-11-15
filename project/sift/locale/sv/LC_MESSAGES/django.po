@@ -36,19 +36,19 @@ msgstr "Svenska"
 
 #: project/sift/templates/404.html:5 project/sift/templates/404.html.py:11
 msgid "Page Not Found"
-msgstr ""
+msgstr "Sidan hittades ej"
 
 #: project/sift/templates/404.html:14
 msgid "Back"
-msgstr ""
+msgstr "Tillbaka"
 
 #: project/sift/templates/_cat_album_creation_modal.html:10
 msgid "Collection info"
-msgstr ""
+msgstr "Samlings Info"
 
 #: project/sift/templates/_cat_album_creation_modal.html:17
 msgid "System error"
-msgstr ""
+msgstr "System fel"
 
 #: project/sift/templates/_cat_album_creation_modal.html:23
 msgid "Filter selection"
@@ -56,7 +56,7 @@ msgstr ""
 
 #: project/sift/templates/_cat_album_creation_modal.html:25
 msgid "Choose an existing album"
-msgstr ""
+msgstr "Välj album"
 
 #: project/sift/templates/_cat_album_creation_modal.html:32
 msgid "Or create a new one"
@@ -72,15 +72,15 @@ msgstr ""
 
 #: project/sift/templates/_cat_album_creation_modal.html:59
 msgid "Cancel"
-msgstr ""
+msgstr "Avbryt"
 
 #: project/sift/templates/_cat_album_creation_modal.html:62
 msgid "Submit"
-msgstr ""
+msgstr "Skicka in"
 
 #: project/sift/templates/_cat_header.html:6
 msgid "Back to homepage"
-msgstr ""
+msgstr "Tillbaka till startsidan"
 
 #: project/sift/templates/_cat_header.html:7
 #: project/sift/templates/cat_base.html:7
@@ -103,7 +103,7 @@ msgstr ""
 #: project/sift/templates/_cat_mode_select.html:23
 #: project/sift/templates/_cat_mode_select.html:47
 msgid "All pictures"
-msgstr ""
+msgstr "Alla bilder"
 
 #: project/sift/templates/_cat_header.html:46
 #: project/sift/templates/_cat_header.html:84
@@ -130,20 +130,20 @@ msgstr ""
 
 #: project/sift/templates/_cat_header.html:105
 msgid "Sift.pics on Google Play"
-msgstr ""
+msgstr "Sift.pics på Google Play"
 
 #: project/sift/templates/_cat_header.html:115
 #: project/sift/templates/cat_about.html:22
 msgid "Sift.pics on Facebook"
-msgstr ""
+msgstr "Sift.pics på Facebook"
 
 #: project/sift/templates/_cat_header.html:125 project/sift/views.py:660
 msgid "About"
-msgstr ""
+msgstr "Om"
 
 #: project/sift/templates/_cat_header.html:132
 msgid "Choose language"
-msgstr ""
+msgstr "Välj språk"
 
 #: project/sift/templates/cat_about.html:12
 msgid "Published on March 28, 2015"
@@ -173,7 +173,7 @@ msgstr ""
 
 #: project/sift/templates/cat_about.html:21
 msgid "Sift.pics on Twitter"
-msgstr ""
+msgstr "Sift.pics på Twitter"
 
 #: project/sift/templates/cat_about.html:23
 msgid ""
@@ -251,11 +251,11 @@ msgstr ""
 
 #: project/sift/templates/cat_base.html:127
 msgid "Got it!"
-msgstr ""
+msgstr "Jag fattar!"
 
 #: project/sift/templates/cat_base.html:128
 msgid "More info"
-msgstr ""
+msgstr "Mer info"
 
 #: project/sift/templates/cat_connect.html:35
 msgid "What is the connection? Anything goes."
@@ -312,7 +312,7 @@ msgstr ""
 
 #: project/sift/templates/cat_curator.html:79
 msgid "Clear selection"
-msgstr ""
+msgstr "Töm urval"
 
 #: project/sift/templates/cat_curator.html:84
 msgid "Submit selection to Sift"
@@ -324,7 +324,7 @@ msgstr ""
 
 #: project/sift/templates/cat_curator.html:119
 msgid "Error"
-msgstr ""
+msgstr "Fel"
 
 #: project/sift/templates/cat_curator.html:127
 msgid "Title"
@@ -336,25 +336,25 @@ msgstr ""
 
 #: project/sift/templates/cat_curator.html:148
 msgid "Close"
-msgstr ""
+msgstr "Stäng"
 
 #: project/sift/templates/cat_curator.html:151
 msgid "Save"
-msgstr ""
+msgstr "Spara"
 
 #: project/sift/templates/cat_photo_permalink.html:32
 msgid "Author"
-msgstr ""
+msgstr "Författare"
 
 #: project/sift/templates/cat_photo_permalink.html:34
 msgid "Source"
-msgstr ""
+msgstr "Källa"
 
 #: project/sift/templates/cat_photo_permalink.html:35
 msgid "Album"
 msgid_plural "Albums"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Album"
+msgstr[1] "Album"
 
 #: project/sift/templates/cat_photo_permalink.html:38
 #: project/sift/templates/cat_photo_permalink.html:49
@@ -378,7 +378,7 @@ msgstr ""
 #: project/sift/templates/cat_results.html:26
 #: project/sift/templates/cat_tagger.html:37
 msgid "N/A"
-msgstr ""
+msgstr "Passar inte"
 
 #: project/sift/templates/cat_results.html:36
 msgid "Result set position"
@@ -408,27 +408,27 @@ msgstr ""
 
 #: project/sift/views.py:481
 msgid "Interior"
-msgstr ""
+msgstr "Inomhus"
 
 #: project/sift/views.py:482
 msgid "Exterior"
-msgstr ""
+msgstr "Utomhus"
 
 #: project/sift/views.py:483
 msgid "View"
-msgstr ""
+msgstr "Vy"
 
 #: project/sift/views.py:484
 msgid "Social"
-msgstr ""
+msgstr "Social"
 
 #: project/sift/views.py:485
 msgid "Ground"
-msgstr ""
+msgstr "Från Mark Nivå"
 
 #: project/sift/views.py:486
 msgid "Raised"
-msgstr ""
+msgstr "Från Upprest Nivå"
 
 #: project/sift/views.py:487
 msgid "Rural"
@@ -440,67 +440,67 @@ msgstr ""
 
 #: project/sift/views.py:489
 msgid "One"
-msgstr ""
+msgstr "En Person"
 
 #: project/sift/views.py:490
 msgid "Many"
-msgstr ""
+msgstr "Många personer"
 
 #: project/sift/views.py:491
 msgid "Public"
-msgstr ""
+msgstr "Offentlig"
 
 #: project/sift/views.py:492
 msgid "Private"
-msgstr ""
+msgstr "Privat"
 
 #: project/sift/views.py:493
 msgid "Whole"
-msgstr ""
+msgstr "Generell"
 
 #: project/sift/views.py:494
 msgid "Detail"
-msgstr ""
+msgstr "Närbild"
 
 #: project/sift/views.py:495
 msgid "Staged"
-msgstr ""
+msgstr "Iscensatt"
 
 #: project/sift/views.py:496
 msgid "Natural"
-msgstr ""
+msgstr "Naturlig"
 
 #: project/sift/views.py:497
 msgid "Manmade"
-msgstr ""
+msgstr "Konstgjord"
 
 #: project/sift/views.py:498
 msgid "Nature"
-msgstr ""
+msgstr "Natur"
 
 #: project/sift/views.py:500
 msgid "interior"
-msgstr ""
+msgstr "inomhus"
 
 #: project/sift/views.py:501
 msgid "exterior"
-msgstr ""
+msgstr "utomhus"
 
 #: project/sift/views.py:502
 msgid "view"
-msgstr ""
+msgstr "vy"
 
 #: project/sift/views.py:503
 msgid "social"
-msgstr ""
+msgstr "social"
 
 #: project/sift/views.py:504
 msgid "ground"
-msgstr ""
+msgstr "från Mark Nivå"
 
 #: project/sift/views.py:505
 msgid "raised"
-msgstr ""
+msgstr "från Upprest Nivå"
 
 #: project/sift/views.py:506
 msgid "rural"
@@ -512,43 +512,43 @@ msgstr ""
 
 #: project/sift/views.py:508
 msgid "one"
-msgstr ""
+msgstr "en Person"
 
 #: project/sift/views.py:509
 msgid "many"
-msgstr ""
+msgstr "många personel"
 
 #: project/sift/views.py:510
 msgid "public"
-msgstr ""
+msgstr "offentlig"
 
 #: project/sift/views.py:511
 msgid "private"
-msgstr ""
+msgstr "privat"
 
 #: project/sift/views.py:512
 msgid "whole"
-msgstr ""
+msgstr "generell"
 
 #: project/sift/views.py:513
 msgid "detail"
-msgstr ""
+msgstr "närbild"
 
 #: project/sift/views.py:514
 msgid "staged"
-msgstr ""
+msgstr "iscensatt"
 
 #: project/sift/views.py:515
 msgid "natural"
-msgstr ""
+msgstr "naturlig"
 
 #: project/sift/views.py:516
 msgid "manmade"
-msgstr ""
+msgstr "konstgjord"
 
 #: project/sift/views.py:517
 msgid "nature"
-msgstr ""
+msgstr "natur"
 
 #: project/sift/views.py:519
 msgid "interior_or_exterior_NA"
