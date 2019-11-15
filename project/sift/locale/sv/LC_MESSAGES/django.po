@@ -378,7 +378,7 @@ msgstr ""
 #: project/sift/templates/cat_results.html:26
 #: project/sift/templates/cat_tagger.html:37
 msgid "N/A"
-msgstr ""
+msgstr "Passar inte"
 
 #: project/sift/templates/cat_results.html:36
 msgid "Result set position"

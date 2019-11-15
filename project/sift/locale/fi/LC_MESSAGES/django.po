@@ -369,7 +369,7 @@ msgstr ""
 #: project/sift/templates/cat_results.html:26
 #: project/sift/templates/cat_tagger.html:37
 msgid "N/A"
-msgstr ""
+msgstr "Ei sovi"
 
 #: project/sift/templates/cat_results.html:36
 msgid "Result set position"
@@ -531,7 +531,7 @@ msgstr "lähikuva"
 
 #: project/sift/views.py:514
 msgid "staged"
-msgstr ""lavastettu
+msgstr "lavastettu"
 
 #: project/sift/views.py:515
 #| msgid "Rural"
