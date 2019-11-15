@@ -6,6 +6,14 @@
     {% include "_cat_header.html" %}
 {% endblock %}
 
+{% block specific_css %}
+    {% compress css %}
+        {% if is_tabletview %}
+            <link rel="stylesheet" href="{% static "css/siftpics-tablet-map.css" %}">
+        {% endif %}
+    {% endcompress %}
+{% endblock %}
+
 {% block layout %}
     <div class="container {% if not request.mobile %}cat-margin-top-125{% else %}cat-margin-top-50{% endif %}" id="cat-about-container">
         <br><br>
