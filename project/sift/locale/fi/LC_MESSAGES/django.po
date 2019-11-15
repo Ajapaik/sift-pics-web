@@ -370,7 +370,7 @@ msgstr "Suodata albumin kuvia merkkausten perustella"
 
 #: project/sift/templates/cat_photo_permalink.html:64
 msgid "Our users have tagged this photo"
-msgstr "Käyttäjämme ovat merkanneet tämän kuvan"
+msgstr "Käyttäjiemme kuvalle tekemät merkkaukset"
 
 #: project/sift/templates/cat_photo_permalink.html:76
 msgid "Favorite this photo"
