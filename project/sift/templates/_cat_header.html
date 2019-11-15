@@ -8,6 +8,7 @@
             </a>
             <a class="hidden-xs" id="cat-brand-dummy"></a>
         </div>
+        {% if not is_tabletview %}
         <div class="navbar-header pull-left">
             <ul class="nav pull-right">
                 <li class="dropdown pull-left">
@@ -56,6 +57,19 @@
                 {% endif %}
             </ul>
         </div>
+        {% else %}
+        <div class="navbar-header pull-left">
+            <ul class="nav pull-right">
+                <li class="dropdown pull-left">
+                        <div class="hidden cat-text-overflow-ellipsis cat-no-background cat-text-white" id="cat-header-showing-album-pictures">
+                            <i class="material-icons">photo_album</i>
+                            <span></span>
+                        </div>
+                </li>
+            </ul>
+        </div>
+        {% endif %}
+
         <div class="navbar-header pull-right">
             <button id="cat-toggle-nav" type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle cat-no-background">
                 <span class="sr-only">{% trans "Toggle navigation" %}</span>

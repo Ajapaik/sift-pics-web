@@ -683,7 +683,8 @@ def cat_tagger(request):
         'albums': albums,
         'fb_share_photos': fb_share_photos,
         'state_json': dumps(state),
-        'user_can_curate': user_can_curate
+        'user_can_curate': user_can_curate,
+        'is_tabletview': request.path.find("tag-tablet") > 0
     }))
 
 
