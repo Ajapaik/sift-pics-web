@@ -107,12 +107,12 @@ msgstr "Kaikki kuvat"
 #: project/sift/templates/_cat_header.html:46
 #: project/sift/templates/_cat_header.html:84
 msgid "Tag photos"
-msgstr ""
+msgstr "Merkkaa kuvia"
 
 #: project/sift/templates/_cat_header.html:51
 #: project/sift/templates/_cat_header.html:89
 msgid "Filter by tags"
-msgstr ""
+msgstr "Suodata kuvia merkkauksilla"
 
 #: project/sift/templates/_cat_header.html:60
 msgid "Make connections"
@@ -121,11 +121,11 @@ msgstr ""
 #: project/sift/templates/_cat_header.html:66
 #: project/sift/templates/_cat_header.html:99
 msgid "Curate photos"
-msgstr ""
+msgstr "Valitse kuvia"
 
 #: project/sift/templates/_cat_header.html:75
 msgid "Toggle navigation"
-msgstr ""
+msgstr "Näytä/piilota navigaatio"
 
 #: project/sift/templates/_cat_header.html:105
 msgid "Sift.pics on Google Play"
@@ -294,63 +294,63 @@ msgstr ""
 
 #: project/sift/templates/cat_curator.html:60
 msgid "Load more"
-msgstr ""
+msgstr "Hae lisää"
 
 #: project/sift/templates/cat_curator.html:65
 msgid "Select all"
-msgstr ""
+msgstr "Valitse kaikki"
 
 #: project/sift/templates/cat_curator.html:69
 msgid "Start"
-msgstr ""
+msgstr "Aloita"
 
 #: project/sift/templates/cat_curator.html:70
 msgid "Stop"
-msgstr ""
+msgstr "Lopeta"
 
 #: project/sift/templates/cat_curator.html:71
 msgid "Step"
-msgstr ""
+msgstr "Askel"
 
 #: project/sift/templates/cat_curator.html:79
 msgid "Clear selection"
-msgstr ""
+msgstr "Tyhjennä valinnat"
 
 #: project/sift/templates/cat_curator.html:84
 msgid "Submit selection to Sift"
-msgstr ""
+msgstr "Lähetä valinnat Sift.picsiin"
 
 #: project/sift/templates/cat_curator.html:112
 msgid "Edit your album"
-msgstr ""
+msgstr "Muokkaa albumiasi"
 
 #: project/sift/templates/cat_curator.html:119
 msgid "Error"
-msgstr ""
+msgstr "Virhe"
 
 #: project/sift/templates/cat_curator.html:127
 msgid "Title"
-msgstr ""
+msgstr "Otsikko"
 
 #: project/sift/templates/cat_curator.html:137
 msgid "Subtitle"
-msgstr ""
+msgstr "Alaotsikko"
 
 #: project/sift/templates/cat_curator.html:148
 msgid "Close"
-msgstr ""
+msgstr "Sulje"
 
 #: project/sift/templates/cat_curator.html:151
 msgid "Save"
-msgstr ""
+msgstr "Tallenna"
 
 #: project/sift/templates/cat_photo_permalink.html:32
 msgid "Author"
-msgstr ""
+msgstr "Tekijä"
 
 #: project/sift/templates/cat_photo_permalink.html:34
 msgid "Source"
-msgstr ""
+msgstr "Lähde"
 
 #: project/sift/templates/cat_photo_permalink.html:35
 msgid "Album"
@@ -361,20 +361,20 @@ msgstr[1] "Albumit"
 #: project/sift/templates/cat_photo_permalink.html:38
 #: project/sift/templates/cat_photo_permalink.html:49
 msgid "Tag photos in this album"
-msgstr ""
+msgstr "Merkkaa kuvat tässä albumissa"
 
 #: project/sift/templates/cat_photo_permalink.html:41
 #: project/sift/templates/cat_photo_permalink.html:52
 msgid "Filter photos by tags in this album"
-msgstr ""
+msgstr "Suodata albumin kuvia merkkausten perustella"
 
 #: project/sift/templates/cat_photo_permalink.html:64
 msgid "Our users have tagged this photo"
-msgstr ""
+msgstr "Käyttäjämme ovat merkanneet tämän kuvan"
 
 #: project/sift/templates/cat_photo_permalink.html:76
 msgid "Favorite this photo"
-msgstr ""
+msgstr "Tykkää kuvasta"
 
 #: project/sift/templates/cat_results.html:25
 #: project/sift/templates/cat_results.html:26
@@ -388,25 +388,25 @@ msgstr ""
 
 #: project/sift/templates/cat_results.html:48
 msgid "Previous"
-msgstr ""
+msgstr "Edellinen"
 
 #: project/sift/templates/cat_results.html:51
 msgid "Current page"
-msgstr ""
+msgstr "Nykyinen sivu"
 
 #: project/sift/templates/cat_results.html:54
 msgid "Next"
-msgstr ""
+msgstr "Seuraava"
 
 #: project/sift/templates/cat_results.html:76 project/sift/views.py:634
 #: project/sift/views.py:636
 msgid "Filter photos by tags"
-msgstr ""
+msgstr "Suodata kuvia merkkausten perusteella"
 
 #: project/sift/templates/cat_tagger.html:98 project/sift/views.py:672
 #: project/sift/views.py:677
 msgid "Tag historic photos"
-msgstr ""
+msgstr "Merkkaa historiallisia kuvia"
 
 #: project/sift/views.py:481
 msgid "Interior"
@@ -596,7 +596,7 @@ msgstr ""
 
 #: project/sift/views.py:978
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: project/sift/views.py:988
 msgid "Error uploading file"
