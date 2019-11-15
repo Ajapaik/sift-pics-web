@@ -189,6 +189,17 @@ msgid ""
 "it is useful to capture that information\n"
 "            that would enable <b>bulk filtering of images</b> afterwards."
 msgstr ""
+"Historic photographs in public collections very often lack <b>basic "
+"classificatory tags</b> &#8211;\n"
+"            whether a picture is an <b>interior or exterior view</b>, has "
+"the picture been taken from\n"
+"            <b>ground level or from a raised viewpoint</b> (a higher floor "
+"window or tower), is it a view photograph\n"
+"            depicting mainly a <b>place</b> or a reportage photo about an "
+"<b>event</b> etc. Most of these decisions\n"
+"            are easy to make for everyone only by looking at a picture, so "
+"it is useful to capture that information\n"
+"            that would enable <b>bulk filtering of images</b> afterwards."
 
 #: project/sift/templates/cat_about.html:29
 msgid ""
@@ -204,32 +215,32 @@ msgstr ""
 
 #: project/sift/templates/cat_about.html:35
 msgid "Team"
-msgstr ""
+msgstr "Team"
 
 #: project/sift/templates/cat_about.html:36
 msgid "concept: Vahur Puik"
-msgstr ""
+msgstr "concept: Vahur Puik"
 
 #: project/sift/templates/cat_about.html:36
 msgid "Vahur Puik on Twitter"
-msgstr ""
+msgstr "Vahur Puik on Twitter"
 
 #: project/sift/templates/cat_about.html:37
 msgid "back-end development: Lauri Elias"
-msgstr ""
+msgstr "back-end development: Lauri Elias"
 
 #: project/sift/templates/cat_about.html:38
 msgid "android app development: Janek Priimann"
-msgstr ""
+msgstr "android app development: Janek Priimann"
 
 #: project/sift/templates/cat_about.html:40
 msgid "Sift.pics has received a grant from the Estonian Ministry of Culture"
-msgstr ""
+msgstr "Sift.pics has received a grant from the Estonian Ministry of Culture"
 
 #: project/sift/templates/cat_about.html:41
 #: project/sift/templates/cat_about.html:42
 msgid "Estonian Ministry of Culture"
-msgstr ""
+msgstr "Estonian Ministry of Culture"
 
 #: project/sift/templates/cat_base.html:12
 msgid "Sift.pics picture categorisation app by Ajapaik.ee"

@@ -183,6 +183,12 @@ msgid ""
 "            are easy to make for everyone only by looking at a picture, so it is useful to capture that information\n"
 "            that would enable <b>bulk filtering of images</b> afterwards."
 msgstr ""
+"Historic photographs in public collections very often lack <b>basic classificatory tags</b> &#8211;\n"
+"            whether a picture is an <b>interior or exterior view</b>, has the picture been taken from\n"
+"            <b>ground level or from a raised viewpoint</b> (a higher floor window or tower), is it a view photograph\n"
+"            depicting mainly a <b>place</b> or a reportage photo about an <b>event</b> etc. Most of these decisions\n"
+"            are easy to make for everyone only by looking at a picture, so it is useful to capture that information\n"
+"            that would enable <b>bulk filtering of images</b> afterwards."
 
 #: project/sift/templates/cat_about.html:29
 msgid ""
@@ -192,35 +198,40 @@ msgid ""
 "            sorting decisions, they can favorite (bookmark) images, see the title of the\n"
 "            image and open the image in an official web repository."
 msgstr ""
+"<b>Sift.pics</b> is a participatory <b>crowdsourcing application</b>\n"
+"            for that kind of binary categorisation about images. We take in pictures from\n"
+"            public collections that users start to browse and ask them to make couple of\n"
+"            sorting decisions, they can favorite (bookmark) images, see the title of the\n"
+"            image and open the image in an official web repository."
 
 #: project/sift/templates/cat_about.html:35
 msgid "Team"
-msgstr ""
+msgstr "Team"
 
 #: project/sift/templates/cat_about.html:36
 msgid "concept: Vahur Puik"
-msgstr ""
+msgstr "concept: Vahur Puik"
 
 #: project/sift/templates/cat_about.html:36
 msgid "Vahur Puik on Twitter"
-msgstr "Vahur Puik Twitterissä"
+msgstr "Vahur Puik on Twitter"
 
 #: project/sift/templates/cat_about.html:37
 msgid "back-end development: Lauri Elias"
-msgstr ""
+msgstr "back-end development: Lauri Elias"
 
 #: project/sift/templates/cat_about.html:38
 msgid "android app development: Janek Priimann"
-msgstr ""
+msgstr "android app development: Janek Priimann"
 
 #: project/sift/templates/cat_about.html:40
 msgid "Sift.pics has received a grant from the Estonian Ministry of Culture"
-msgstr ""
+msgstr "Sift.pics has received a grant from the Estonian Ministry of Culture"
 
 #: project/sift/templates/cat_about.html:41
 #: project/sift/templates/cat_about.html:42
 msgid "Estonian Ministry of Culture"
-msgstr ""
+msgstr "Estonian Ministry of Culture"
 
 #: project/sift/templates/cat_base.html:12
 msgid "Sift.pics picture categorisation app by Ajapaik.ee"
@@ -232,7 +243,7 @@ msgstr ""
 
 #: project/sift/templates/cat_base.html:95
 msgid "feedback"
-msgstr ""
+msgstr "palaute"
 
 #: project/sift/templates/cat_base.html:126
 msgid ""
@@ -242,11 +253,11 @@ msgstr ""
 
 #: project/sift/templates/cat_base.html:127
 msgid "Got it!"
-msgstr ""
+msgstr "Selvä!"
 
 #: project/sift/templates/cat_base.html:128
 msgid "More info"
-msgstr ""
+msgstr "Lisätietoja"
 
 #: project/sift/templates/cat_connect.html:35
 msgid "What is the connection? Anything goes."
@@ -463,7 +474,7 @@ msgstr "Dokumentaarinen"
 
 #: project/sift/views.py:497
 msgid "Manmade"
-msgstr "Man-made"
+msgstr "Keinotekoinen"
 
 #: project/sift/views.py:498
 msgid "Nature"
