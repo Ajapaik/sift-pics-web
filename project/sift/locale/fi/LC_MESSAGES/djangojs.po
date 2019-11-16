@@ -88,7 +88,7 @@ msgstr "Lavastettu"
 
 #: project/sift/static/js/cat-extra-js-translations.js:18
 msgid "Natural"
-msgstr "Luonto"
+msgstr "Luonnollinen"
 
 #: project/sift/static/js/cat-extra-js-translations.js:19
 msgid "Public"

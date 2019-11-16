@@ -470,7 +470,7 @@ msgstr "Lavastettu"
 
 #: project/sift/views.py:496
 msgid "Natural"
-msgstr "Dokumentaarinen"
+msgstr "Luonnollinen"
 
 #: project/sift/views.py:497
 msgid "Manmade"
@@ -547,7 +547,7 @@ msgstr "lavastettu"
 #: project/sift/views.py:515
 #| msgid "Rural"
 msgid "natural"
-msgstr "dokumentaarinen"
+msgstr "luonnollinen"
 
 #: project/sift/views.py:516
 #| msgid "Manmade"

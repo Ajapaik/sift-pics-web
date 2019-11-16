@@ -1,5 +1,9 @@
 #cat-brand { display:none }
 #cat-tagger-share-button {display:none}
 .cat-header-tag {display:none}
-div#cat-header-showing-album-pictures { font-size: 20px; }
+div#cat-header-showing-album-pictures { 
+	font-size: 20px;
+	overflow: visible !important; 
+
+}
 #cat-about-link {display:none}
