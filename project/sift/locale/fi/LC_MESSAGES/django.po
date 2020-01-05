@@ -474,7 +474,7 @@ msgstr "Luonnollinen"
 
 #: project/sift/views.py:497
 msgid "Manmade"
-msgstr "Keinotekoinen"
+msgstr "Rakennettu"
 
 #: project/sift/views.py:498
 msgid "Nature"
@@ -552,7 +552,7 @@ msgstr "luonnollinen"
 #: project/sift/views.py:516
 #| msgid "Manmade"
 msgid "manmade"
-msgstr "keinotekoinen"
+msgstr "rakennettu"
 
 #: project/sift/views.py:517
 msgid "nature"

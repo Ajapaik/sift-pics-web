@@ -52,7 +52,7 @@ msgstr "Maaseutu"
 
 #: project/sift/static/js/cat-extra-js-translations.js:9
 msgid "Manmade"
-msgstr "Keinotekoinen"
+msgstr "Rakennettu"
 
 #: project/sift/static/js/cat-extra-js-translations.js:10
 msgid "Nature"
