@@ -30,9 +30,13 @@
                         <div class="hidden" id="cat-tagger-photo-description-container">
                             <p id="cat-tagger-photo-description" title=""></p>
                             <p id="cat-tagger-photo-source">
-                                <a href="" target="_blank" title="">
+                            {% if is_tabletview %}
                                     <span></span>
-                                </a>
+                            {% else %}
+                                 <a href="" target="_blank" title="">
+                                     <span></span>
+                                 </a>
+                            {% endif %}
                             </p>
                         </div>
                     </div>
