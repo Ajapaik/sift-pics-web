@@ -69,8 +69,8 @@
             $('#cat-tagger-photo-description-container').addClass('hidden');
             $('#cat-tagger-photo-description').html(this.currentPhoto.title).attr('title', this.currentPhoto.title);
             var sourceDiv = $('#cat-tagger-photo-source');
-            sourceDiv.find('a').attr('href', this.currentPhoto.source.url).attr('title', this.currentPhoto.title)
-                .find('span').html(this.currentPhoto.source.name);
+            sourceDiv.find('a').attr('href', this.currentPhoto.source.url).attr('title', this.currentPhoto.title);
+            sourceDiv.find('span').html(this.currentPhoto.source.name);
             this.updateFavoriteButton();
         },
         updateFavoriteButton: function () {

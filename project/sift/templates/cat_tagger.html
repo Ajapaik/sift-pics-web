@@ -20,9 +20,13 @@
             <div class="row cat-full-height">
                 <div id="cat-tagger-image-and-button-container">
                     <div id="cat-tagger-image-and-desc-container">
+                        {% if is_tabletview %}
+                            <img id="cat-tagger-current-photo" alt="" title="" class="img-responsive">
+                        {% else %}
                         <a id="cat-tagger-current-photo-link" href="" target="_blank" title="">
                             <img id="cat-tagger-current-photo" alt="" title="" class="img-responsive">
                         </a>
+                        {% endif %}
                         <div class="hidden" id="cat-tagger-photo-description-container">
                             <p id="cat-tagger-photo-description" title=""></p>
                             <p id="cat-tagger-photo-source">
